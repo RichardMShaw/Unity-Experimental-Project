@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821d7b0c41e511d42acbad125daa7f84, type: 3}
+  m_Name: TestBattle
+  m_EditorClassIdentifier: 
+  cameraSetting: {fileID: 11400000, guid: 523892d9c264d60408772d98dea60be7, type: 2}
+  formation: {fileID: 11400000, guid: c30e4ca308ca2da4b83abada2068643c, type: 2}
+  monsterGroup:
+  - {fileID: 11400000, guid: 79cbf1ec7a926f249a89462f0641dcc2, type: 2}

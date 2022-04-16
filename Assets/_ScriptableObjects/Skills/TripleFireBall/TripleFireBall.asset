@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34f128c5fd2eb74884cfe194ca7d748, type: 3}
+  m_Name: TripleFireBall
+  m_EditorClassIdentifier: 
+  name: Triple Fire Ball
+  description: 
+  scope: {fileID: 11400000, guid: ab147fccc2bc0b04daaf61fddc94e8d6, type: 2}
+  skillTypes:
+  - {fileID: 11400000, guid: d71dcd8290e347e43b30b8d67cca302e, type: 2}
+  skillEffects:
+  - {fileID: 11400000, guid: 0b45114c01f7dd342a11af7f22bb8a1e, type: 2}

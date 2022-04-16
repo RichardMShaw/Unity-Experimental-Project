@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b88a267084074f4e8387e6abe6151b6, type: 3}
+  m_Name: SlashDamage
+  m_EditorClassIdentifier: 
+  elements:
+  - {fileID: 11400000, guid: 4521ab17a22bfd24da7b9c6476138d83, type: 2}
+  powerAttribute: {fileID: 11400000, guid: 2a1a45965d08e0c419e7bb6ef65bc7ac, type: 2}
+  defenseAttribute: {fileID: 11400000, guid: 98a59bd40c4b2d045b3631f13fb596da, type: 2}
+  affectedAttribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+  attacks:
+  - effects:
+    - overrideAffectedAttribute: {fileID: 0}
+      potency: 100
+    accuracy: 100
+    hits: 1

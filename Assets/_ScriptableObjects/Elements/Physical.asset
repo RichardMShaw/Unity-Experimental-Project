@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b510df10ef5164e9bc4c728e4f8341, type: 3}
+  m_Name: Physical
+  m_EditorClassIdentifier: 
+  name: Physcial
+  description: 
+  powerAttribute: {fileID: 11400000, guid: 5a44d1fa359fd7543af527037ebe0e45, type: 2}
+  weaknessAttribute: {fileID: 11400000, guid: 9069c5515a51ec548ad7532638fc9302, type: 2}
