@@ -48,11 +48,11 @@ public class DamageSkillEffect : SkillEffect
               {
                 damage /= defense;
               }
-              damage = Mathf.Floor(damage);
+              int result = (int)Mathf.Floor(damage);
               var stat = t.GetStat(effect.overrideAffectedAttribute ?? affectedAttribute);
               int value = stat.basicValue;
-              stat.basicValue += (int)damage;
-              Debug.Log((int)damage);
+              stat.basicValue += result;
+              Debug.Log(result);
               Debug.Log(stat.basicValue);
             }
           }
