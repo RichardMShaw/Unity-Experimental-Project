@@ -18,32 +18,44 @@ public class DamageSkillEffect : SkillEffect
   public override void Cast(BattleCharacter caster, BattleCharacter target)
   {
     var elementPower = 1.0f;
-    var weakness = 1.0f;
     foreach (var element in elements)
     {
       elementPower *= caster.GetStatValue(element.powerAttribute) / 100;
-      weakness *= target.GetStatValue(element.weaknessAttribute) / 100;
     }
     var power = caster.GetStatValue(powerAttribute);
     var defense = target.GetStatValue(defenseAttribute) / 100;
-    var rawDamage = power * elementPower * weakness * -1;
+    var rawDamage = power * elementPower * -1;
     foreach (var attack in attacks)
     {
       var accuracy = attack.accuracy;
-      if (accuracy > 99 || accuracy > UnityEngine.Random.Range(0, 99))
+      var hits = attack.hits;
+      var targets = attack.GetTargets(caster, target);
+      for (int i = 0; i < hits; i++)
       {
-        foreach (var effect in attack.effects)
+        if (accuracy >= 99 || accuracy > UnityEngine.Random.Range(0, 99))
         {
-          var potency = effect.potency / 100;
-          var damage = rawDamage * potency;
-          if (defense > 1)
+          foreach (var effect in attack.effects)
           {
-            damage /= defense;
+            foreach(var t in targets){
+              var weakness = 1.0f;
+              foreach (var element in elements)
+              {
+                weakness *= t.GetStatValue(element.weaknessAttribute) / 100; ;
+              }
+              var potency = effect.potency / 100;
+              var damage = rawDamage * weakness * potency;
+              if (defense > 1)
+              {
+                damage /= defense;
+              }
+              damage = Mathf.Floor(damage);
+              var stat = t.GetStat(effect.overrideAffectedAttribute ?? affectedAttribute);
+              int value = stat.basicValue;
+              stat.basicValue += (int)damage;
+              Debug.Log((int)damage);
+              Debug.Log(stat.basicValue);
+            }
           }
-          damage = Mathf.Floor(damage);
-          var stat = target.GetStat(effect.overrideAffectedAttribute ?? affectedAttribute);
-          int value = stat.basicValue;
-          stat.basicValue += (int)damage;
         }
       }
     }
@@ -53,15 +65,18 @@ public class DamageSkillEffect : SkillEffect
 [Serializable]
 public struct DamageInstance
 {
+  public Target targets;
   public List<DamageEffect> effects;
   public int accuracy;
   public int hits;
+  public List<BattleCharacter> GetTargets(BattleCharacter caster, BattleCharacter target){
+    return targets.GetTargets(caster, target);
+  }
 }
 
 [Serializable]
 public struct DamageEffect
 {
-
   public BasicAttribute overrideAffectedAttribute;
 
   public int potency;
