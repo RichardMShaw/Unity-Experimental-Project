@@ -9,6 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a73b3e3013c9b454d9a3ecf414bbd4b0, type: 3}
-  m_Name: Single
+  m_Script: {fileID: 11500000, guid: 880d9f8356d988b41996e08b7b456408, type: 3}
+  m_Name: Hero
   m_EditorClassIdentifier: 
+  name: 
+  description: 
+  basicStats: []
+  coreStats: []
+  elementStats: []
+  skills: []

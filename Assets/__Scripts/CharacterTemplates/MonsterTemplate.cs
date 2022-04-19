@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "Project/BattleCharacterTemplates/Monster")]
+[CreateAssetMenu(menuName = "Project/Characters/Monster")]
 public class MonsterTemplate : CharacterTemplate
 {
 }

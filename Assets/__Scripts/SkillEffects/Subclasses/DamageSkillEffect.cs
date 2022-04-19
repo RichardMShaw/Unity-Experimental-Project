@@ -46,10 +46,10 @@ public class DamageSkillEffect : SkillEffect
               var damage = rawDamage * weakness * potency;
               if (defense > 1)
               {
-                damage /= defense;
+                damage /= defense / 100;
               }
               int result = (int)Mathf.Floor(damage);
-              var stat = t.GetStat(effect.overrideAffectedAttribute ?? affectedAttribute);
+              var stat = t.GetStat(effect.affectedAttribute ?? affectedAttribute);
               int value = stat.basicValue;
               stat.basicValue += result;
               Debug.Log(result);
@@ -70,6 +70,11 @@ public struct DamageInstance
   public int accuracy;
   public int hits;
   public List<BattleCharacter> GetTargets(BattleCharacter caster, BattleCharacter target){
+    if(targets == null){
+      var list = new List<BattleCharacter>();
+      list.Add(target);
+      return list;
+    }
     return targets.GetTargets(caster, target);
   }
 }
@@ -77,7 +82,7 @@ public struct DamageInstance
 [Serializable]
 public struct DamageEffect
 {
-  public BasicAttribute overrideAffectedAttribute;
+  public BasicAttribute affectedAttribute;
 
   public int potency;
 }
