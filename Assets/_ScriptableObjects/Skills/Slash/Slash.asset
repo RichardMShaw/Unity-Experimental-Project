@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Slash
   description: 
+  costs:
+  - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
+    cost: 2
   scope: {fileID: 11400000, guid: 1797666d8bde3f343aff020dc297aa47, type: 2}
   skillTypes:
   - {fileID: 11400000, guid: 9223508d81903c64b9570e3ef7f7afcb, type: 2}

@@ -1363,7 +1363,6 @@ GameObject:
   - component: {fileID: 1573614031}
   - component: {fileID: 1573614033}
   - component: {fileID: 1573614034}
-  - component: {fileID: 1573614035}
   m_Layer: 0
   m_Name: EventListeners
   m_TagString: Untagged
@@ -1470,23 +1469,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1573614035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573614030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716c5ca2818d4ca4782fbc2594d870b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _channel: {fileID: 11400000, guid: 07a951290f29bdf498d3505a0b9763a6, type: 2}
-  OnEventRaised:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 11400000, guid: c8af724b377d9ab4abbbd749321790c8, type: 2}, m_TargetAssemblyTypeName: Test, Assembly-CSharp: }
 --- !u!1 &1771726977
 GameObject:
   m_ObjectHideFlags: 0

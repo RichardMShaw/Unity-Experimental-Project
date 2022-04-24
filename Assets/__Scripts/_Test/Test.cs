@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Project/_Test")]
 public class Test : ScriptableObject
 {
-  public void TestFunction(BattleCharacter character)
+  public void TestFunction(BattleFormation obj)
   {
-    Debug.Log(character.template.name);
+    Debug.Log(obj.formations);
   }
 }

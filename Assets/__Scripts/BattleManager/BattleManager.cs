@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Project/Singletons/Managers/Battle Manager")]
 public class BattleManager : ScriptableObject
 {
   public Battle battle;

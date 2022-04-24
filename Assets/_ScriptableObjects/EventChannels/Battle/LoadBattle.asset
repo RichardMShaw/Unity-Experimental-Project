@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243fa24d654f770459ef331eb308b26b, type: 3}
-  m_Name: Energy
+  m_Script: {fileID: 11500000, guid: a53a74c5d81197845b2fce1e3239e676, type: 3}
+  m_Name: LoadBattle
   m_EditorClassIdentifier: 
-  type: Energy
-  description: 
-  defaultValue: 10
-  defaultBasicValue: 0
