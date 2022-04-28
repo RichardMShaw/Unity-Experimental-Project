@@ -40,6 +40,39 @@ public struct Stat
     cachedValue = (int)modifier.value;
   }
 
+  public Stat(Attribute attribute, int value)
+  {
+    basicValue = attribute.getDefaultBasicValue;
+    cachedTypeValues = new Dictionary<Modifier, float>();
+
+    modifiers = new Dictionary<StatModifier, StatModifier>();
+    var modifier = attribute.DefaultModifier();
+    modifier.value = value;
+
+    baseStat = modifier;
+    modifiers.Add(modifier, modifier);
+
+    var type = modifier.type;
+    cachedTypeValues.Add(type, modifier.value);
+    cachedValue = (int)modifier.value;
+  }
+  public Stat(Attribute attribute, int value, int _basicValue)
+  {
+    basicValue = _basicValue;
+    cachedTypeValues = new Dictionary<Modifier, float>();
+
+    modifiers = new Dictionary<StatModifier, StatModifier>();
+    var modifier = attribute.DefaultModifier();
+    modifier.value = value;
+
+    baseStat = modifier;
+    modifiers.Add(modifier, modifier);
+
+    var type = modifier.type;
+    cachedTypeValues.Add(type, modifier.value);
+    cachedValue = (int)modifier.value;
+  }
+
   private void CalculateModifiers()
   {
     cachedValue = 1;

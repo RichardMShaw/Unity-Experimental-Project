@@ -9,7 +9,6 @@ public struct StatAttributes
   public Dictionary<Attribute, Stat> stats;
 
   public List<StatAttribute> statAttributes;
-
   public Stat GetStat(Attribute attribute)
   {
     if (stats.ContainsKey(attribute))
@@ -19,7 +18,6 @@ public struct StatAttributes
     var newStat = new Stat(attribute);
     stats.Add(attribute, newStat);
     statAttributes.Add(new StatAttribute(attribute, newStat));
-    newStat.AddModifier(attribute.DefaultModifier());
     return newStat;
   }
   public int GetValue(Attribute attribute)
@@ -50,7 +48,6 @@ public struct StatAttributes
     var newStat = new Stat(attribute);
     stats.Add(attribute, newStat);
     statAttributes.Add(new StatAttribute(attribute, newStat));
-    newStat.AddModifier(attribute.DefaultModifier());
     newStat.basicValue = value;
   }
 
@@ -63,7 +60,6 @@ public struct StatAttributes
       var newStat = new Stat(attribute);
       stats.Add(attribute, newStat);
       statAttributes.Add(new StatAttribute(attribute, newStat));
-      newStat.AddModifier(attribute.DefaultModifier());
       newStat.AddModifier(modifier);
       return;
     }
@@ -80,6 +76,27 @@ public struct StatAttributes
     }
     var stat = stats[attribute];
     stat.RemoveModifier(modifier);
+  }
+
+  public void AddAttribute(Attribute attribute, int value)
+  {
+    if (stats.ContainsKey(attribute))
+    {
+      return;
+    }
+    var newStat = new Stat(attribute, value);
+    stats.Add(attribute, newStat);
+    statAttributes.Add(new StatAttribute(attribute, newStat));
+  }
+  public void AddBasicAttribute(Attribute attribute, int value, int basicValue)
+  {
+    if (stats.ContainsKey(attribute))
+    {
+      return;
+    }
+    var newStat = new Stat(attribute, value, basicValue);
+    stats.Add(attribute, newStat);
+    statAttributes.Add(new StatAttribute(attribute, newStat));
   }
 }
 

@@ -8,6 +8,6 @@ public class BattleMonster : BattleCharacter
 {
 
   public BattleMonster(MonsterTemplate monster){
-    
+    initalizer(monster);
   }
 }
