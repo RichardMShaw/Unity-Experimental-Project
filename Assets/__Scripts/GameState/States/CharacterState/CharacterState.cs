@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Project/State/BattleCharacterState")]
+[CreateAssetMenu(menuName = "Project/State/Character")]
 public class CharacterState : State
 {
   public Flags values;
