@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Project/Characters/Parties/Heroes")]
 public class HeroParty : ScriptableObject
 {
-  public HeroPartySlot heroes;
+  public List<HeroPartySlot> heroes;
 
 }
 
@@ -18,6 +18,7 @@ public struct HeroPartySlot
   public List<HeroPartySlotBasicStat> stats;
 }
 
+[Serializable]
 public struct HeroPartySlotBasicStat
 {
   public BasicAttribute attribute;

@@ -4,11 +4,17 @@ using UnityEngine;
 
 
 //A wrapper for Attributes and Stats
-public struct StatAttributes
+public class StatAttributes
 {
   public Dictionary<Attribute, Stat> stats;
 
   public List<StatAttribute> statAttributes;
+
+  public StatAttributes()
+  {
+    stats = new Dictionary<Attribute, Stat>();
+    statAttributes = new List<StatAttribute>();
+  }
   public Stat GetStat(Attribute attribute)
   {
     if (stats.ContainsKey(attribute))

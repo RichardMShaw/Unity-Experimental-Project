@@ -8,7 +8,22 @@ public class Battle : ScriptableObject
 {
   public CameraSetting cameraSetting;
   public BattleFormation formation;
+  public HeroParty heroParty;
+  public List<MonsterTemplate> monsterParty;
 
-  public List<MonsterTemplate> monsterGroup;
+  public List<MonsterTemplate> monsters
+  {
+    get
+    {
+      return monsterParty;
+    }
+  }
+  public List<HeroPartySlot> heroes
+  {
+    get
+    {
+      return heroParty.heroes;
+    }
+  }
 
 }

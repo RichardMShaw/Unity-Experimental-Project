@@ -4,13 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BattleCharacter
 {
-  public CharacterTemplate template;
 
   public StatAttributes stats;
 
-  public List<BattleCharacter> allies;
+  public BattleManager battleManager;
 
-  public List<BattleCharacter> enemies;
+  public virtual List<BattleCharacter> allies
+  {
+    get
+    {
+      return null;
+    }
+  }
+
+  public virtual List<BattleCharacter> enemies
+  {
+    get
+    {
+      return null;
+    }
+  }
 
   public Stat GetStat(Attribute attribute)
   {
@@ -26,8 +39,9 @@ public class BattleCharacter
     return stats.GetBasicValue(attribute);
   }
 
-  public void initalizer(CharacterTemplate template)
+  public void Initalize(CharacterTemplate template, BattleManager _battleManager)
   {
+    battleManager = _battleManager;
     stats = new StatAttributes();
     foreach (var stat in template.basicStats)
     {

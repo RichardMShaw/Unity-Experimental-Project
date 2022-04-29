@@ -18,9 +18,6 @@ MonoBehaviour:
   - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
     value: 1500
     basicValue: 1000
-  - attribute: {fileID: 0}
-    value: 0
-    basicValue: 0
   coreStats:
   - attribute: {fileID: 11400000, guid: eb67d738fcb1e704c99d1e0a0d32a9d5, type: 2}
     value: 130

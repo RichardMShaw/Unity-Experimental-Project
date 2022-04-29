@@ -6,8 +6,25 @@ using UnityEngine;
 [Serializable]
 public class BattleMonster : BattleCharacter
 {
+  public MonsterTemplate template;
+  public override List<BattleCharacter> allies
+  {
+    get
+    {
+      return battleManager.monsters.GetPartyAsBaseClass();
+    }
+  }
 
-  public BattleMonster(MonsterTemplate monster){
-    initalizer(monster);
+  public override List<BattleCharacter> enemies
+  {
+    get
+    {
+      return battleManager.heroes.GetPartyAsBaseClass();
+    }
+  }
+  public BattleMonster(MonsterTemplate monster, BattleManager _battleManager)
+  {
+    template = monster;
+    Initalize(template, _battleManager);
   }
 }

@@ -11,8 +11,10 @@ public class Attribute : ScriptableObject
 
   public int defaultValue = 100;
 
-  public virtual int getDefaultBasicValue {
-    get {
+  public virtual int getDefaultBasicValue
+  {
+    get
+    {
       return 0;
     }
   }
