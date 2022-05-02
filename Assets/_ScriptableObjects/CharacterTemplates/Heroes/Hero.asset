@@ -19,7 +19,7 @@ MonoBehaviour:
     value: 2000
     basicValue: 2000
   - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
-    value: 10
+    value: 2
     basicValue: 2
   coreStats:
   - attribute: {fileID: 11400000, guid: 2a1a45965d08e0c419e7bb6ef65bc7ac, type: 2}

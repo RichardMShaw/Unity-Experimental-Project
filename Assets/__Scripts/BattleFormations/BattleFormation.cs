@@ -8,10 +8,10 @@ public class BattleFormation : ScriptableObject
 {
   public List<Formation> formations;
 
-  public Formation GetFormation(List<BattleCharacter> list){
+  public Formation GetFormation(List<BattleMonster> list){
     var len = list.Count - 1;
     foreach(var formation in formations){
-      if(len < formation.formationPositions.Count){
+      if(len < formation.Count){
         return formation;
       }
     }
@@ -23,6 +23,12 @@ public class BattleFormation : ScriptableObject
 public struct Formation 
 {
   public List<FormationPosition> formationPositions;
+
+  public int Count {
+    get {
+      return formationPositions.Count;
+    }
+  }
 }
 
 [Serializable]

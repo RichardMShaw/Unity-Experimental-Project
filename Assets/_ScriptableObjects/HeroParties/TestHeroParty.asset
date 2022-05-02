@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49746cc60783bc94b98f334063200034, type: 3}
   m_Name: TestHeroParty
   m_EditorClassIdentifier: 
-  heroes: []
+  heroes:
+  - template: {fileID: 11400000, guid: 16b099aad626a944f84de8ab13901014, type: 2}
+    stats:
+    - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+      basicValue: 1800
+    - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
+      basicValue: 2

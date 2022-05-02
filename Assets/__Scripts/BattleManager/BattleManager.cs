@@ -8,25 +8,15 @@ public class BattleManager : ScriptableObject
 {
   public Battle battle;
 
-  public BattleFormation formation;
+  public BattleFormation battleFormation;
   public BattleParty<BattleHero> heroes;
   public BattleParty<BattleMonster> monsters;
-
   public BattleState state;
-
-  public void OnBattleHeroSelect(BattleHero hero)
-  {
-    state.OnBattleHeroSelect(hero);
-  }
-  public void OnBattleMonsterSelect(BattleMonster monster)
-  {
-    state.OnBattleMonsterSelect(monster);
-  }
-
+  private Formation currentFormation;
   public void OnLoadBattle(Battle _battle)
   {
     battle = _battle;
-    formation = battle.formation;
+    battleFormation = battle.formation;
     heroes.Initalize();
     monsters.Initalize();
     heroes.Clear();
@@ -39,17 +29,37 @@ public class BattleManager : ScriptableObject
     {
       monsters.Add(new BattleMonster(monster, this));
     }
+
+    currentFormation = battleFormation.GetFormation(monsters.party);
+  }
+  public void OnBattleHeroSelect(BattleHero hero)
+  {
+    state.OnBattleHeroSelect(hero);
+  }
+  public void OnBattleMonsterSelect(BattleMonster monster)
+  {
+    state.OnBattleMonsterSelect(monster);
   }
 }
 
 [Serializable]
 public struct BattleParty<T> where T : BattleCharacter
 {
-  [SerializeField]
-  private List<T> party;
+  public List<T> party;
 
   [SerializeField]
   private List<BattleCharacter> partyAsBaseClass;
+  public void Initalize()
+  {
+    if (party == null)
+    {
+      party = new List<T>();
+    }
+    if (partyAsBaseClass == null)
+    {
+      partyAsBaseClass = new List<BattleCharacter>();
+    }
+  }
 
   public List<BattleCharacter> GetPartyAsBaseClass()
   {
@@ -80,16 +90,5 @@ public struct BattleParty<T> where T : BattleCharacter
   {
     party.Clear();
     partyAsBaseClass.Clear();
-  }
-  public void Initalize()
-  {
-    if (party == null)
-    {
-      party = new List<T>();
-    }
-    if (partyAsBaseClass == null)
-    {
-      partyAsBaseClass = new List<BattleCharacter>();
-    }
   }
 }
