@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Project/Singletons/Managers/Battle Manager")]
 public class BattleManager : ScriptableObject
 {
   public Battle battle;
@@ -13,6 +12,15 @@ public class BattleManager : ScriptableObject
   public BattleParty<BattleMonster> monsters;
   public BattleState state;
   private Formation currentFormation;
+
+  [Header("Event Channels")]
+
+  public VoidEventChannel hideUIChannel;
+
+  public VoidEventChannel showBattleUIChannel;
+
+  public BattleHeroListEventChannel loadHeroesChannel;
+
   public void OnLoadBattle(Battle _battle)
   {
     battle = _battle;
@@ -31,6 +39,9 @@ public class BattleManager : ScriptableObject
     }
 
     currentFormation = battleFormation.GetFormation(monsters.party);
+    hideUIChannel.RaiseEvent();
+    showBattleUIChannel.RaiseEvent();
+    loadHeroesChannel.RaiseEvent(heroes.party);
   }
   public void OnBattleHeroSelect(BattleHero hero)
   {

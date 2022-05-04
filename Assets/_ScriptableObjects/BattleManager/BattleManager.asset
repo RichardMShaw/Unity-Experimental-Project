@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BattleManager
   m_EditorClassIdentifier: 
   battle: {fileID: 11400000, guid: d9f5c00fe6b0e454bb56984fc2eb0577, type: 2}
-  formation: {fileID: 0}
+  battleFormation: {fileID: 11400000, guid: c30e4ca308ca2da4b83abada2068643c, type: 2}
   heroes:
     party:
     - battleManager: {fileID: 11400000}
@@ -24,3 +24,6 @@ MonoBehaviour:
     - battleManager: {fileID: 11400000}
       template: {fileID: 11400000, guid: 79cbf1ec7a926f249a89462f0641dcc2, type: 2}
   state: {fileID: 0}
+  hideUIChannel: {fileID: 11400000, guid: 46ab5709b91572643a716a0743bf750f, type: 2}
+  showBattleUIChannel: {fileID: 11400000, guid: 003ccfedea6adda4990cab6bf270b637,
+    type: 2}

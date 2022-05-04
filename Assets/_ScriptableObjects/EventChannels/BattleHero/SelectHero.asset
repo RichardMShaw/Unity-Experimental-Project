@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd11f56cbf8b95e4998836c3dbd57fc1, type: 3}
-  m_Name: LoadGameChannel
+  m_Script: {fileID: 11500000, guid: a8ab34461e40cf84e957bc98f08fa6c2, type: 3}
+  m_Name: SelectHero
   m_EditorClassIdentifier: 

@@ -6,12 +6,13 @@ public class BattleMonsterComponent : MonoBehaviour
 {
   public BattleMonster monster;
 
+  [Header("Event Channels")]
   [SerializeField]
-  private BattleMonsterEventChannel _monsterSelectChannel;
+  private BattleMonsterEventChannel _monsterSelect;
 
   public void OnMonsterSelect()
   {
-    _monsterSelectChannel.RaiseEvent(monster);
+    _monsterSelect.RaiseEvent(monster);
   }
 
 }

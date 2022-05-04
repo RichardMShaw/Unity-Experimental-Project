@@ -6,6 +6,12 @@ using UnityEngine;
 public class BattleHero : BattleCharacter
 {
   public HeroTemplate template;
+
+  public override string name {
+    get {
+      return template.name;
+    }
+  }
   public List<Skill> skills;
   public override List<BattleCharacter> allies
   {

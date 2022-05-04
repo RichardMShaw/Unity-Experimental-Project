@@ -7,6 +7,14 @@ using UnityEngine;
 public class BattleMonster : BattleCharacter
 {
   public MonsterTemplate template;
+
+  public override string name
+  {
+    get
+    {
+      return template.name;
+    }
+  }
   public override List<BattleCharacter> allies
   {
     get

@@ -4,7 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BattleCharacter
 {
-
+  public virtual string name
+  {
+    get
+    {
+      return "";
+    }
+  }
   public StatAttributes stats;
 
   public BattleManager battleManager;
