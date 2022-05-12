@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3902715461957197438}
+  - component: {fileID: 5704182563282839815}
+  - component: {fileID: 574620139079586911}
   m_Layer: 5
   m_Name: Energy
   m_TagString: Untagged
@@ -38,6 +40,49 @@ RectTransform:
   m_AnchoredPosition: {x: 100, y: -25}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5704182563282839815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902715461957197433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0750f2b5dda22054fbf3e7089f29c916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 4013802289853167384}
+  attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
+  valueText: {fileID: 3902715463991017810}
+--- !u!114 &574620139079586911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902715461957197433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b98f13ae985ae4680d1d5f5929d723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _channel: {fileID: 11400000, guid: 9fc6a4b99788b294f92d220c1f9b3fed, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5704182563282839815}
+        m_TargetAssemblyTypeName: BattleHeroUIBasicStatComponent, Assembly-CSharp
+        m_MethodName: OnRerender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3902715462271149086
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +435,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3902715463086851109}
+  - component: {fileID: 5061549857450927027}
+  - component: {fileID: 891619840994921736}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -419,6 +466,49 @@ RectTransform:
   m_AnchoredPosition: {x: -100.000015, y: -25}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5061549857450927027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902715463086851108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0750f2b5dda22054fbf3e7089f29c916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 4013802289853167384}
+  attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+  valueText: {fileID: 3902715462308310630}
+--- !u!114 &891619840994921736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902715463086851108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b98f13ae985ae4680d1d5f5929d723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _channel: {fileID: 11400000, guid: 9fc6a4b99788b294f92d220c1f9b3fed, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5061549857450927027}
+        m_TargetAssemblyTypeName: BattleHeroUIBasicStatComponent, Assembly-CSharp
+        m_MethodName: OnRerender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3902715463174112597
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +521,7 @@ GameObject:
   - component: {fileID: 4013802289853167384}
   - component: {fileID: -8922365524141994106}
   m_Layer: 5
-  m_Name: Hero
+  m_Name: HeroUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

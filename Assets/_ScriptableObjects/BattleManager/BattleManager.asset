@@ -27,3 +27,4 @@ MonoBehaviour:
   hideUIChannel: {fileID: 11400000, guid: 46ab5709b91572643a716a0743bf750f, type: 2}
   showBattleUIChannel: {fileID: 11400000, guid: 003ccfedea6adda4990cab6bf270b637,
     type: 2}
+  loadHeroesChannel: {fileID: 11400000, guid: 70a0f4f0bf79be14da559858f11d82c0, type: 2}
