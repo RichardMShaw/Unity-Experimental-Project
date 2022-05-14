@@ -362,8 +362,8 @@ GameObject:
   - component: {fileID: 348482401}
   - component: {fileID: 348482403}
   - component: {fileID: 348482402}
-  - component: {fileID: 348482405}
   - component: {fileID: 348482404}
+  - component: {fileID: 348482405}
   m_Layer: 5
   m_Name: HeroList
   m_TagString: Untagged
@@ -389,7 +389,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -400}
-  m_SizeDelta: {x: 1264, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348482402
 MonoBehaviour:
@@ -448,7 +448,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 348482405}
-        m_TargetAssemblyTypeName: HeroListComponent, Assembly-CSharp
+        m_TargetAssemblyTypeName: BattleHeroListComponent, Assembly-CSharp
         m_MethodName: LoadHeroes
         m_Mode: 0
         m_Arguments:
@@ -473,7 +473,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroPrefab: {fileID: 3902715463174112597, guid: 0c721a00eb352224ea91df5fc616e532,
     type: 3}
-  UpdateHeroUI: {fileID: 11400000, guid: 9fc6a4b99788b294f92d220c1f9b3fed, type: 2}
+  RerenderHeroUIChannel: {fileID: 11400000, guid: 9fc6a4b99788b294f92d220c1f9b3fed,
+    type: 2}
 --- !u!1 &436782957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,6 +1612,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8155125f37563b64883704e26b7e23b5, type: 3}
+--- !u!1 &1405277325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5738743097684040068, guid: 8155125f37563b64883704e26b7e23b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1405277324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1472444639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,8 +2772,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 616123503504580803}
+  - component: {fileID: 616123503504580804}
   m_Layer: 0
-  m_Name: MonsterGroup
+  m_Name: MonsterList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2790,6 +2798,20 @@ Transform:
   m_Father: {fileID: 616123503604794391}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616123503504580804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616123503504580802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d4e719c998fe04b84bb4467f6bf7bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 1405277325}
+  RerenderMonsterSpritesChannel: {fileID: 0}
 --- !u!1 &616123503604794390
 GameObject:
   m_ObjectHideFlags: 0

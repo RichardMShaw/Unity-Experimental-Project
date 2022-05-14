@@ -5,6 +5,9 @@ using UnityEngine;
 public class CharacterTemplate : ScriptableObject
 {
   public new string name;
+
+  public SpriteData spriteData;
+
   [TextArea(3, 20)]
   public string description;
 

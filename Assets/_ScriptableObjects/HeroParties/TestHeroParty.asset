@@ -19,3 +19,9 @@ MonoBehaviour:
       basicValue: 1800
     - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
       basicValue: 2
+  - template: {fileID: 11400000, guid: 508fd7b5fd0d2a04cb3213cd5bfa1ca8, type: 2}
+    stats:
+    - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+      basicValue: 1000
+    - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
+      basicValue: 3

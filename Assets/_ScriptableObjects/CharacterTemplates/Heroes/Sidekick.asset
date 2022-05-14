@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d9f8356d988b41996e08b7b456408, type: 3}
   m_Name: Sidekick
   m_EditorClassIdentifier: 
-  name: 
+  name: Sidekick
+  sprite: {fileID: 0}
   description: 
-  basicStats: []
+  basicStats:
+  - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+    value: 1500
+    basicValue: 1500
+  - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
+    value: 3
+    basicValue: 3
   coreStats: []
   elementStats: []
   skills: []

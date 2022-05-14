@@ -11,15 +11,17 @@ public class BattleManager : ScriptableObject
   public BattleParty<BattleHero> heroes;
   public BattleParty<BattleMonster> monsters;
   public BattleState state;
-  private Formation currentFormation;
+  private MonsterFormation monsterFormation;
 
   [Header("Event Channels")]
 
   public VoidEventChannel hideUIChannel;
-
   public VoidEventChannel showBattleUIChannel;
-
   public BattleHeroListEventChannel loadHeroesChannel;
+
+  public BattleMonsterListEventChannel loadMonstersChannel;
+
+  public MonsterFormationEventChannel loadMonsterFormationChannel;
 
   public void OnLoadBattle(Battle _battle)
   {
@@ -38,10 +40,12 @@ public class BattleManager : ScriptableObject
       monsters.Add(new BattleMonster(monster, this));
     }
 
-    currentFormation = battleFormation.GetFormation(monsters.party);
+    monsterFormation = battleFormation.GetMonsterFormation(monsters.party);
     hideUIChannel.RaiseEvent();
     showBattleUIChannel.RaiseEvent();
     loadHeroesChannel.RaiseEvent(heroes.party);
+    loadMonstersChannel.RaiseEvent(monsters.party);
+    loadMonsterFormationChannel.RaiseEvent(monsterFormation);
   }
   public void OnBattleHeroSelect(BattleHero hero)
   {
@@ -49,7 +53,6 @@ public class BattleManager : ScriptableObject
   }
   public void OnBattleMonsterSelect(BattleMonster monster)
   {
-    state.OnBattleMonsterSelect(monster);
   }
 }
 

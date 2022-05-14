@@ -24,7 +24,6 @@ public class BattleHeroComponent : MonoBehaviour
 
   public void UpdateUI()
   {
-    Debug.Log(hero.name);
     heroName.text = hero.name;
 
   }

@@ -7,6 +7,5 @@ public class Test : ScriptableObject
 {
   public void TestFunction(BattleFormation obj)
   {
-    Debug.Log(obj.formations);
   }
 }

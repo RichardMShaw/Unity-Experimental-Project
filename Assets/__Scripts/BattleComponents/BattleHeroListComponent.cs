@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroListComponent : MonoBehaviour
+public class BattleHeroListComponent : MonoBehaviour
 {
   public GameObject heroPrefab;
 
-  public VoidEventChannel UpdateHeroUI;
+  public VoidEventChannel RerenderHeroUIChannel;
   public void LoadHeroes(List<BattleHero> heroes)
   {
     foreach (Transform child in transform)
@@ -22,7 +22,7 @@ public class HeroListComponent : MonoBehaviour
       heroComponent.hero = hero;
     }
 
-    UpdateHeroUI.RaiseEvent();
+    RerenderHeroUIChannel.RaiseEvent();
   }
 
 }

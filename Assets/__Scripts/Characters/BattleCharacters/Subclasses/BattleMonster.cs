@@ -15,6 +15,14 @@ public class BattleMonster : BattleCharacter
       return template.name;
     }
   }
+
+  public override SpriteData spriteData
+  {
+    get
+    {
+      return template.spriteData;
+    }
+  }
   public override List<BattleCharacter> allies
   {
     get

@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Project/Battles/Formation")]
+[CreateAssetMenu(menuName = "Project/Battles/Monster Formation")]
 public class BattleFormation : ScriptableObject
 {
-  public List<Formation> formations;
+  public List<MonsterFormation> formations;
 
-  public Formation GetFormation(List<BattleMonster> list){
+  public MonsterFormation GetMonsterFormation(List<BattleMonster> list){
     var len = list.Count - 1;
     foreach(var formation in formations){
       if(len < formation.Count){
@@ -20,9 +20,9 @@ public class BattleFormation : ScriptableObject
 }
 
 [Serializable]
-public struct Formation 
+public struct MonsterFormation 
 {
-  public List<FormationPosition> formationPositions;
+  public List<MonsterFormationPosition> formationPositions;
 
   public int Count {
     get {
@@ -32,9 +32,9 @@ public struct Formation
 }
 
 [Serializable]
-public struct FormationPosition
+public struct MonsterFormationPosition
 {
   public Vector3 position;
-  public Vector3 rotation;
+  public Quaternion rotation;
   public Vector3 scale;
 }

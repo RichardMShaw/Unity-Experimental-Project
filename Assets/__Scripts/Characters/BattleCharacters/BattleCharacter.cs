@@ -11,6 +11,12 @@ public class BattleCharacter
       return "";
     }
   }
+
+  public virtual SpriteData spriteData {
+    get {
+      return null;
+    }
+  }
   public StatAttributes stats;
 
   public BattleManager battleManager;
