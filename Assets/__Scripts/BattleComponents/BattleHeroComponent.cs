@@ -8,24 +8,22 @@ public class BattleHeroComponent : MonoBehaviour
   public BattleHero hero;
 
   [Header("Event Channels")]
-  [SerializeField]
+  public BattleHeroEventChannel heroSelect;
 
   [Header("Component Config")]
   public TextMeshProUGUI heroName;
   public TextMesh health;
   public TextMesh energy;
 
-  private BattleHeroEventChannel _heroSelect;
 
-  public void OnMonsterSelect()
+  public void OnHeroSelect()
   {
-    _heroSelect.RaiseEvent(hero);
+    heroSelect.RaiseEvent(hero);
   }
 
   public void UpdateUI()
   {
     heroName.text = hero.name;
-
   }
 
 }

@@ -7,11 +7,11 @@ public class LoadBattleComponent : MonoBehaviour
   public Battle battle;
 
   [SerializeField]
-  private BattleEventChannel _loadBattleChannel;
+  private BattleEventChannel loadBattleChannel;
 
   public void OnLoadBattle()
   {
-    _loadBattleChannel.RaiseEvent(battle);
+    loadBattleChannel.RaiseEvent(battle);
   }
 
 }

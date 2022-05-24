@@ -7,21 +7,27 @@ public class BattleManager : ScriptableObject
 {
   public Battle battle;
 
-  public BattleFormation battleFormation;
   public BattleParty<BattleHero> heroes;
   public BattleParty<BattleMonster> monsters;
-  public BattleState state;
+  public BattleFormation battleFormation;
   private MonsterFormation monsterFormation;
+
+  //State Management
+  public BattleStateFactory stateFactory;
+  [Header("State Management")]
+  public BattleBaseState currentState;
+  public BattleHero selectedHero;
+  public SkillSlot selectedSkillSlot;
 
   [Header("Event Channels")]
 
   public VoidEventChannel hideUIChannel;
   public VoidEventChannel showBattleUIChannel;
   public BattleHeroListEventChannel loadHeroesChannel;
-
   public BattleMonsterListEventChannel loadMonstersChannel;
-
   public MonsterFormationEventChannel loadMonsterFormationChannel;
+  public BattleHeroEventChannel loadBattleSkillMenuChannel;
+  public VoidEventChannel hideBattleSkillMenuChannel;
 
   public void OnLoadBattle(Battle _battle)
   {
@@ -46,13 +52,20 @@ public class BattleManager : ScriptableObject
     loadHeroesChannel.RaiseEvent(heroes.party);
     loadMonstersChannel.RaiseEvent(monsters.party);
     loadMonsterFormationChannel.RaiseEvent(monsterFormation);
+    currentState = stateFactory.HeroMenu();
+    currentState.EnterState();
   }
   public void OnBattleHeroSelect(BattleHero hero)
   {
-    state.OnBattleHeroSelect(hero);
+    currentState.OnBattleHeroSelect(hero);
   }
   public void OnBattleMonsterSelect(BattleMonster monster)
   {
+    currentState.OnBattleMonsterSelect(monster);
+  }
+
+  public void OnBattleHeroSkillSlotSelect(SkillSlot skillSlot){
+    currentState.OnBattleHeroSkillSlotSelect(skillSlot);
   }
 }
 

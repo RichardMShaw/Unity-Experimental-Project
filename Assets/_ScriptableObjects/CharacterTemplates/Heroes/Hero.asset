@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d9f8356d988b41996e08b7b456408, type: 3}
   m_Name: Hero
   m_EditorClassIdentifier: 
-  name: Warrior
+  name: Hero
+  spriteData: {fileID: 0}
   description: 
   basicStats:
   - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class CharacterTemplate : ScriptableObject
+public abstract class CharacterTemplate : ScriptableObject
 {
   public new string name;
 

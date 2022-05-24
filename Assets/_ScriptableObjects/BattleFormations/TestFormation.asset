@@ -15,22 +15,22 @@ MonoBehaviour:
   formations:
   - formationPositions:
     - position: {x: 0, y: 0, z: -4}
-      rotation: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       scale: {x: 1, y: 1, z: 1}
   - formationPositions:
     - position: {x: -0.9, y: 0, z: -3.5}
-      rotation: {x: 0, y: 345, z: 0}
+      rotation: {x: 0, y: 0.13052632, z: 0, w: -0.9914448}
       scale: {x: 1, y: 1, z: 1}
     - position: {x: 0.9, y: 0, z: -3.5}
-      rotation: {x: 0, y: 15, z: 0}
+      rotation: {x: 0, y: 0.1305262, z: 0, w: 0.9914449}
       scale: {x: 1, y: 1, z: 1}
   - formationPositions:
     - position: {x: -1.8, y: 0, z: -3}
-      rotation: {x: 0, y: 330, z: 0}
+      rotation: {x: 0, y: 0.25881913, z: 0, w: -0.9659258}
       scale: {x: 1, y: 1, z: 1}
     - position: {x: 0, y: 0, z: -2.6}
-      rotation: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
       scale: {x: 1, y: 1, z: 1}
     - position: {x: 1.8, y: 0, z: -3}
-      rotation: {x: 0, y: 30.000008, z: 0}
+      rotation: {x: 0, y: 0.25881904, z: 0, w: 0.9659258}
       scale: {x: 1, y: 1, z: 1}

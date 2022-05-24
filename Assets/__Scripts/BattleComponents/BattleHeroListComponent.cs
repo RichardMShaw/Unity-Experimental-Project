@@ -6,7 +6,7 @@ public class BattleHeroListComponent : MonoBehaviour
 {
   public GameObject heroPrefab;
 
-  public VoidEventChannel RerenderHeroUIChannel;
+  public VoidEventChannel rerenderBattleHeroChannel;
   public void LoadHeroes(List<BattleHero> heroes)
   {
     foreach (Transform child in transform)
@@ -22,7 +22,7 @@ public class BattleHeroListComponent : MonoBehaviour
       heroComponent.hero = hero;
     }
 
-    RerenderHeroUIChannel.RaiseEvent();
+    rerenderBattleHeroChannel.RaiseEvent();
   }
 
 }

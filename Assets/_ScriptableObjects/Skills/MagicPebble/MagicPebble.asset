@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34f128c5fd2eb74884cfe194ca7d748, type: 3}
   m_Name: MagicPebble
   m_EditorClassIdentifier: 
-  name: MagicPebble
+  name: Magic Pebble
   description: 
+  costs: []
   scope: {fileID: 11400000, guid: 1797666d8bde3f343aff020dc297aa47, type: 2}
   skillTypes:
   - {fileID: 11400000, guid: d71dcd8290e347e43b30b8d67cca302e, type: 2}

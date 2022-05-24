@@ -13,18 +13,39 @@ MonoBehaviour:
   m_Name: BattleManager
   m_EditorClassIdentifier: 
   battle: {fileID: 11400000, guid: d9f5c00fe6b0e454bb56984fc2eb0577, type: 2}
-  battleFormation: {fileID: 11400000, guid: c30e4ca308ca2da4b83abada2068643c, type: 2}
   heroes:
     party:
     - battleManager: {fileID: 11400000}
       template: {fileID: 11400000, guid: 16b099aad626a944f84de8ab13901014, type: 2}
-      skills: []
+      skillSlots:
+      - skill: {fileID: 11400000, guid: 606ec5c35fda32a4ebd5d14512ce79f4, type: 2}
+    - battleManager: {fileID: 11400000}
+      template: {fileID: 11400000, guid: 508fd7b5fd0d2a04cb3213cd5bfa1ca8, type: 2}
+      skillSlots:
+      - skill: {fileID: 11400000, guid: aa96d4dab112a2e4390511c3f73d4017, type: 2}
+      - skill: {fileID: 11400000, guid: 37cda5edcda37fa4abde5127dfd71997, type: 2}
   monsters:
     party:
     - battleManager: {fileID: 11400000}
       template: {fileID: 11400000, guid: 79cbf1ec7a926f249a89462f0641dcc2, type: 2}
-  state: {fileID: 0}
+  battleFormation: {fileID: 11400000, guid: c30e4ca308ca2da4b83abada2068643c, type: 2}
+  stateFactory:
+    _context: {fileID: 11400000}
+  selectedHero:
+    battleManager: {fileID: 0}
+    template: {fileID: 0}
+    skillSlots: []
+  selectedSkillSlot:
+    skill: {fileID: 11400000, guid: aa96d4dab112a2e4390511c3f73d4017, type: 2}
   hideUIChannel: {fileID: 11400000, guid: 46ab5709b91572643a716a0743bf750f, type: 2}
   showBattleUIChannel: {fileID: 11400000, guid: 003ccfedea6adda4990cab6bf270b637,
     type: 2}
   loadHeroesChannel: {fileID: 11400000, guid: 70a0f4f0bf79be14da559858f11d82c0, type: 2}
+  loadMonstersChannel: {fileID: 11400000, guid: d5ebca7b21cec274ba9b9ead8b4a5736,
+    type: 2}
+  loadMonsterFormationChannel: {fileID: 11400000, guid: f1949f6b680e9f24fb10917ba8f279a2,
+    type: 2}
+  loadBattleSkillMenuChannel: {fileID: 11400000, guid: 3a735049a9c12594797797454f241630,
+    type: 2}
+  hideBattleSkillMenuChannel: {fileID: 11400000, guid: 3a7f6327ed2119744bda04c8f0c5e208,
+    type: 2}

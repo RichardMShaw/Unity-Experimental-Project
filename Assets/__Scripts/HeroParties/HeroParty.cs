@@ -16,6 +16,7 @@ public struct HeroPartySlot
   public HeroTemplate template;
 
   public List<HeroPartySlotBasicStat> stats;
+  public List<SkillSlot> skillSlots;
 }
 
 [Serializable]

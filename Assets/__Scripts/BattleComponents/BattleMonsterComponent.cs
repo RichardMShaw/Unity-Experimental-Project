@@ -6,14 +6,14 @@ public class BattleMonsterComponent : MonoBehaviour
 {
   public BattleMonster monster;
 
-  [Header("Config")]
+  [Header("Components")]
   [SerializeField]
   public Transform spriteTransform;
   public SpriteRenderer spriteRenderer;
 
   [Header("Event Channels")]
   [SerializeField]
-  private BattleMonsterEventChannel _monsterSelect;
+  private BattleMonsterEventChannel monsterSelect;
 
   public void OnRerenderSprite()
   {
@@ -27,7 +27,7 @@ public class BattleMonsterComponent : MonoBehaviour
 
   public void OnMonsterSelect()
   {
-    _monsterSelect.RaiseEvent(monster);
+    monsterSelect.RaiseEvent(monster);
   }
 
   public void OnPositionMonster(PositionMonster monsterPosition)

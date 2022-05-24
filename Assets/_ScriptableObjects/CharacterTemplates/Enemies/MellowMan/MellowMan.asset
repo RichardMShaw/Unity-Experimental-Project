@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MellowMan
   m_EditorClassIdentifier: 
   name: Mellow Man
-  sprite: {fileID: 21300000, guid: 934b0bb7732bce74f9a7f6ee88324700, type: 3}
+  spriteData: {fileID: 11400000, guid: 6ae76f370fa1c9b47894b1c6a9598e91, type: 2}
   description: 
   basicStats:
   - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}

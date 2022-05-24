@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c519e4dd327229b4aa570025ad28873c, type: 3}
   m_Name: MellowManIdle
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 934b0bb7732bce74f9a7f6ee88324700, type: 3}
   transfrom:
-    position: {x: 0, y: 0, z: 0}
+    position: {x: 0, y: 0.64, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
-    scale: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
