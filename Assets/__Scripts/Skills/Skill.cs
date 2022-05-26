@@ -12,30 +12,29 @@ public class Skill : ScriptableObject
   public List<CostAttribute> costs; 
   public Scope scope;
   public List<SkillType> skillTypes;
-
   public List<SkillEffect> skillEffects;
   public bool AttemptCast(BattleCharacter caster, BattleCharacter target)
   {
-    var restrictions = new Dictionary<Attribute, bool>();
-    foreach (var type in skillTypes)
-    {
-      foreach (var restriction in type.restrictions)
-        if (!restrictions.ContainsKey(restriction))
-        {
-          restrictions.Add(restriction, true);
-          if (caster.GetStatValue(restriction) > UnityEngine.Random.Range(0, 99))
-          {
-            Debug.Log("Unable to cast skill due to: " + type.name);
-            return false;
-          }
-        }
-    }
-    foreach(var cost in costs){
-      if(caster.GetStatBasicValue(cost.attribute) < cost.cost){
-        Debug.Log("Not enough: " + cost.attribute.name);
-        return false;
-      }
-    }
+    // var restrictions = new Dictionary<Attribute, bool>();
+    // foreach (var type in skillTypes)
+    // {
+    //   foreach (var restriction in type.restrictions)
+    //     if (!restrictions.ContainsKey(restriction))
+    //     {
+    //       restrictions.Add(restriction, true);
+    //       if (caster.GetStatValue(restriction) > UnityEngine.Random.Range(0, 99))
+    //       {
+    //         Debug.Log("Unable to cast skill due to: " + type.name);
+    //         return false;
+    //       }
+    //     }
+    // }
+    // foreach(var cost in costs){
+    //   if(caster.GetStatBasicValue(cost.attribute) < cost.cost){
+    //     Debug.Log("Not enough: " + cost.attribute.name);
+    //     return false;
+    //   }
+    // }
     return true;
   }
 
@@ -44,11 +43,18 @@ public class Skill : ScriptableObject
     if(!AttemptCast(caster, target)){
       return;
     }
-    foreach (var cost in costs)
+    // foreach (var cost in costs)
+    // {
+    //   var stat = caster.GetStat(cost.attribute);
+    //   stat.basicValue -= cost.cost;
+    // }
+    foreach (var skillEffect in skillEffects)
     {
-      var stat = caster.GetStat(cost.attribute);
-      stat.basicValue -= cost.cost;
+      skillEffect.Cast(caster, target);
     }
+  }
+
+  public void BypassAttempt(BattleCharacter caster, BattleCharacter target){
     foreach (var skillEffect in skillEffects)
     {
       skillEffect.Cast(caster, target);
@@ -61,4 +67,8 @@ public struct CostAttribute {
   public BasicAttribute attribute;
 
   public int cost;
+
+  public bool percentOfCurrentValue;
+
+  public bool percentOfMaxValue;
 }
