@@ -14,6 +14,12 @@ public class SkillSlot
     get { return skill.name; }
   }
 
+  public int EnergyCost {
+    get{
+      return skill.energyCost;
+    }
+  }
+
   public SkillSlot(Skill _skill)
   {
     skill = _skill;

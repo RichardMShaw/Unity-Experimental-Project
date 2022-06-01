@@ -36,7 +36,14 @@ public class BattleHeroSkillMenuState : BattleBaseState
     _ctx.selectedSkillSlot = skillSlot;
     SwitchState(_factory.HeroSelectTarget());
   }
+  public override void OnBattleMonsterStopHover(BattleMonster monster)
+  {
 
+  }
+  public override void OnBattleMonsterHover(BattleMonster monster)
+  {
+
+  }
   public override void OnBattleMonsterSelect(BattleMonster monster)
   {
 

@@ -30,7 +30,7 @@ MonoBehaviour:
   elementStats:
   - element: {fileID: 11400000, guid: 0feb4292a233537479a3aea3ef3703fd, type: 2}
     power: 200
-    weakness: 0
+    weakness: 50
   - element: {fileID: 11400000, guid: d228fa8f50def6a46b118da2d752d581, type: 2}
     power: 100
     weakness: 0

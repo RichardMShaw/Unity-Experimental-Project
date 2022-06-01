@@ -20,7 +20,7 @@ MonoBehaviour:
         statAttributes:
         - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
           stat:
-            basicValue: 1800
+            basicValue: 1300
             cachedValue: 2000
         - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
           stat:
@@ -51,11 +51,11 @@ MonoBehaviour:
         statAttributes:
         - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
           stat:
-            basicValue: 1000
+            basicValue: 730
             cachedValue: 1500
         - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
           stat:
-            basicValue: 10
+            basicValue: 4
             cachedValue: 10
         - attribute: {fileID: 11400000, guid: 2a1a45965d08e0c419e7bb6ef65bc7ac, type: 2}
           stat:
@@ -72,7 +72,7 @@ MonoBehaviour:
         - attribute: {fileID: 11400000, guid: 87056de67fc33d946830c15b50887bfe, type: 2}
           stat:
             basicValue: 0
-            cachedValue: 0
+            cachedValue: 50
         - attribute: {fileID: 11400000, guid: 30d750d37e6cffd43b21406a0947364e, type: 2}
           stat:
             basicValue: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
         statAttributes:
         - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
           stat:
-            basicValue: 1284
+            basicValue: 1300
             cachedValue: 1500
         - attribute: {fileID: 11400000, guid: eb67d738fcb1e704c99d1e0a0d32a9d5, type: 2}
           stat:
@@ -215,4 +215,8 @@ MonoBehaviour:
   updateBattleMonsterHealthBar: {fileID: 11400000, guid: 659ef50f6d7450045b9c6c72c71409d4,
     type: 2}
   updateBattleHeroStatBars: {fileID: 11400000, guid: 1b91eb94160d9504dac4621607932243,
+    type: 2}
+  onShowBattleMonsterCursor: {fileID: 11400000, guid: 91e18123a7b14fd438f0ba75ea46bbd0,
+    type: 2}
+  onHideBattleMonsterCursor: {fileID: 11400000, guid: fb3c7d74d34e3774a9e63c4038f6489d,
     type: 2}

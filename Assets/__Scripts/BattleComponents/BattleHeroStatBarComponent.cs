@@ -9,6 +9,7 @@ public class BattleHeroStatBarComponent : MonoBehaviour
   public BattleHeroComponent parent;
   public BasicAttribute attribute;
   public Slider slider;
+  public TextMeshProUGUI label;
   public TextMeshProUGUI value;
   public Image fill;
   public Color fullColor;
@@ -19,7 +20,8 @@ public class BattleHeroStatBarComponent : MonoBehaviour
     slider.maxValue = hero.GetStatValue(attribute);
     slider.value = hero.GetStatBasicValue(attribute);
     value.text = slider.value.ToString();
-    fill.color = gradient.Evaluate(slider.normalizedValue);
+    var color = gradient.Evaluate(slider.normalizedValue);
+    fill.color = color;
   }
 
 }

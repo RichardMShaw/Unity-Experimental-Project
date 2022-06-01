@@ -7,7 +7,8 @@ public class BattleSkillSlotComponent : MonoBehaviour
 {
   public SkillSlot skillSlot;
   [Header("Components")]
-  public TextMeshProUGUI text;
+  public TextMeshProUGUI skillName;
+  public TextMeshProUGUI skillCosts;
 
   [Header("Event Channels")]
   public SkillSlotEventChannel skillSlotHover;
@@ -15,7 +16,8 @@ public class BattleSkillSlotComponent : MonoBehaviour
 
   public void OnRerender()
   {
-    text.text = skillSlot.Name;
+    skillName.text = skillSlot.Name;
+    skillCosts.text = $"EP {skillSlot.EnergyCost}";
   }
 
   public void SkillSlotSelect()

@@ -118,6 +118,7 @@ MonoBehaviour:
   parent: {fileID: 4013802289853167384}
   attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
   slider: {fileID: 6647771740723242710}
+  label: {fileID: 462559263270374925}
   value: {fileID: 7016585075636139458}
   fill: {fileID: 4967950389512964214}
   fullColor: {r: 0, g: 0, b: 0, a: 0}
@@ -1554,25 +1555,26 @@ MonoBehaviour:
   parent: {fileID: 4013802289853167384}
   attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
   slider: {fileID: 4844980488230456488}
+  label: {fileID: 7048678007817760603}
   value: {fileID: 6194717162100335190}
   fill: {fileID: 2658011690130608166}
   fullColor: {r: 0, g: 0, b: 0, a: 0}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.8773585, g: 0.31038627, b: 0.31038627, a: 1}
-    key1: {r: 0.26967752, g: 0.6792453, b: 0.24670699, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.8773585, g: 0, b: 0.106659316, a: 1}
+    key1: {r: 0.9056604, g: 0.90257007, b: 0.28622285, a: 1}
+    key2: {r: 0.90588236, g: 0.90588236, b: 0.28627452, a: 0}
+    key3: {r: 0.34901962, g: 0.74509805, b: 0.4392157, a: 0}
+    key4: {r: 0.30843082, g: 0.80135906, b: 0.42717102, a: 0}
+    key5: {r: 0.24679601, g: 0.8867924, b: 0.40888098, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 16384
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
+    ctime0: 6554
+    ctime1: 26214
+    ctime2: 39321
+    ctime3: 52428
+    ctime4: 65535
+    ctime5: 65535
     ctime6: 0
     ctime7: 0
     atime0: 0
@@ -1583,8 +1585,8 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_Mode: 1
-    m_NumColorKeys: 2
+    m_Mode: 0
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
 --- !u!114 &2632298955487408523
 MonoBehaviour:

@@ -19,19 +19,12 @@ MonoBehaviour:
   defenseAttribute: {fileID: 11400000, guid: 98a59bd40c4b2d045b3631f13fb596da, type: 2}
   affectedAttribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
   attacks:
-  - targets: {fileID: 11400000, guid: 0c00cc7ffc86d3c4386113dfc588bf9c, type: 2}
+  - targets: {fileID: 0}
     accuracy: 100
     hits: 2
     effects:
     - powerAttribute: {fileID: 0}
       defenseAttribute: {fileID: 0}
       affectedAttribute: {fileID: 0}
-      elements:
-      - {fileID: 11400000, guid: 0feb4292a233537479a3aea3ef3703fd, type: 2}
-      potency: 200
-    - powerAttribute: {fileID: 0}
-      defenseAttribute: {fileID: 0}
-      affectedAttribute: {fileID: 0}
-      elements:
-      - {fileID: 11400000, guid: e8b216d06d0644047b85e43970367b44, type: 2}
+      elements: []
       potency: 100

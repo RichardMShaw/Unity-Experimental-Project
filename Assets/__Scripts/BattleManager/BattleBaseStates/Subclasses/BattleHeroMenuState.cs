@@ -26,7 +26,14 @@ public class BattleHeroMenuState : BattleBaseState
   {
 
   }
+  public override void OnBattleMonsterStopHover(BattleMonster monster)
+  {
 
+  }
+  public override void OnBattleMonsterHover(BattleMonster monster)
+  {
+
+  }
   public override void OnBattleMonsterSelect(BattleMonster monster)
   {
 

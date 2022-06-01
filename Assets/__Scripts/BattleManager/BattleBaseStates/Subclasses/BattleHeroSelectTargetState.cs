@@ -27,10 +27,19 @@ public class BattleHeroSelectTargetState : BattleBaseState
   {
 
   }
+  public override void OnBattleMonsterStopHover(BattleMonster monster)
+  {
+    _ctx.onHideBattleMonsterCursor.RaiseEvent(monster);
+  }
+  public override void OnBattleMonsterHover(BattleMonster monster)
+  {
+    _ctx.onShowBattleMonsterCursor.RaiseEvent(monster);
+  }
 
   public override void OnBattleMonsterSelect(BattleMonster monster)
   {
     var skillQueueSlot = new SkillQueueSlot(_ctx.selectedHero, monster, _ctx.selectedSkillSlot);
+    _ctx.onHideBattleMonsterCursor.RaiseEvent(monster);
     _ctx.clearSkillQueueChannel.RaiseEvent();
     _ctx.enqueueSkillChannel.RaiseEvent(skillQueueSlot);
     SwitchState(_factory.HeroSkill());

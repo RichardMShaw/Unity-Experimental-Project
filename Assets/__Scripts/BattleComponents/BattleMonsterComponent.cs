@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BattleMonsterComponent : MonoBehaviour
 {
@@ -18,7 +19,9 @@ public class BattleMonsterComponent : MonoBehaviour
   private BattleMonsterEventChannel pointerExit;
   [SerializeField]
   private BattleMonsterEventChannel pointerDown;
-
+  [Header("Unity Events")]
+  [SerializeField]
+  private UnityEvent showCursor;
   public void OnLoadSprite()
   {
     var spriteData = monster.spriteData;
@@ -49,6 +52,12 @@ public class BattleMonsterComponent : MonoBehaviour
       transform.position = monsterPosition.position;
       transform.rotation = monsterPosition.rotation;
       transform.localScale = monsterPosition.scale;
+    }
+  }
+
+  public void OnShowCursor(BattleMonster _monster){
+    if(monster == _monster){
+      showCursor.Invoke();
     }
   }
 }

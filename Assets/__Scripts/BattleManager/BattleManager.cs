@@ -34,8 +34,9 @@ public class BattleManager : ScriptableObject
   public VoidEventChannel processSkillQueueChannel;
   public VoidEventChannel clearSkillQueueChannel;
   public VoidEventChannel updateBattleMonsterHealthBar;
-
   public VoidEventChannel updateBattleHeroStatBars;
+  public BattleMonsterEventChannel onShowBattleMonsterCursor;
+  public BattleMonsterEventChannel onHideBattleMonsterCursor;
 
   public void OnLoadBattle(Battle _battle)
   {
@@ -71,7 +72,14 @@ public class BattleManager : ScriptableObject
   {
     currentState.OnBattleMonsterSelect(monster);
   }
-
+  public void OnBattleMonsterStopHover(BattleMonster monster)
+  {
+    currentState.OnBattleMonsterStopHover(monster);
+  }
+  public void OnBattleMonsterHover(BattleMonster monster)
+  {
+    currentState.OnBattleMonsterHover(monster);
+  }
   public void OnBattleHeroSkillSlotSelect(SkillSlot skillSlot){
     currentState.OnBattleHeroSkillSlotSelect(skillSlot);
   }
