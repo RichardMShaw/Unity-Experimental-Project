@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.AddressableAssets;
 
 [CreateAssetMenu(menuName = "Project/Event Channels/Battle Character")]
 public class BattleCharacterEventChannel : ScriptableObject

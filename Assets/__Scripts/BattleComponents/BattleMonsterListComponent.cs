@@ -7,8 +7,7 @@ public class BattleMonsterListComponent : MonoBehaviour
   public GameObject monsterPrefab;
 
   [Header("Event Channels")]
-  public VoidEventChannel RerenderMonsterSpritesChannel;
-
+  public VoidEventChannel updateBattleMonsterChannel;
   public PositionMonsterEventChannel positionMonsterEventChannel;
 
   private List<BattleMonster> monsterParty;
@@ -27,7 +26,7 @@ public class BattleMonsterListComponent : MonoBehaviour
       BattleMonsterComponent monsterComponent = monsterObj.GetComponent<BattleMonsterComponent>();
       monsterComponent.monster = monster;
     }
-    RerenderMonsterSpritesChannel.RaiseEvent();
+    updateBattleMonsterChannel.RaiseEvent();
   }
 
   public void LoadMonsterFormation(MonsterFormation formation)

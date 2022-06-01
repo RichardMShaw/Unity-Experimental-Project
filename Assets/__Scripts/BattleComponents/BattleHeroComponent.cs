@@ -12,16 +12,13 @@ public class BattleHeroComponent : MonoBehaviour
 
   [Header("Component Config")]
   public TextMeshProUGUI heroName;
-  public TextMesh health;
-  public TextMesh energy;
-
 
   public void OnHeroSelect()
   {
     heroSelect.RaiseEvent(hero);
   }
 
-  public void UpdateUI()
+  public void OnUpdate()
   {
     heroName.text = hero.name;
   }

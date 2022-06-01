@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 //Where modifier calculations for StatAttributes are done.
-public struct Stat
+[Serializable]
+public class Stat
 {
   public int value
   {

@@ -25,4 +25,8 @@ public class BattleStateFactory
   {
     return new BattleHeroSelectTargetState(_context, this);
   }
+  public BattleBaseState HeroSkill()
+  {
+    return new BattleHeroSkillState(_context, this);
+  }
 }

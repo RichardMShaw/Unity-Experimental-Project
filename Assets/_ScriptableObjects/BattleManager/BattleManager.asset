@@ -16,10 +16,71 @@ MonoBehaviour:
   heroes:
     party:
     - battleManager: {fileID: 11400000}
+      stats:
+        statAttributes:
+        - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+          stat:
+            basicValue: 1800
+            cachedValue: 2000
+        - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 2
+        - attribute: {fileID: 11400000, guid: 2a1a45965d08e0c419e7bb6ef65bc7ac, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 180
+        - attribute: {fileID: 11400000, guid: 98a59bd40c4b2d045b3631f13fb596da, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 200
+        - attribute: {fileID: 11400000, guid: 5a44d1fa359fd7543af527037ebe0e45, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 150
+        - attribute: {fileID: 11400000, guid: 9069c5515a51ec548ad7532638fc9302, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 50
       template: {fileID: 11400000, guid: 16b099aad626a944f84de8ab13901014, type: 2}
       skillSlots:
       - skill: {fileID: 11400000, guid: 606ec5c35fda32a4ebd5d14512ce79f4, type: 2}
+      - skill: {fileID: 11400000, guid: 48b35b1ac0e4f78409d0f4c0c182c236, type: 2}
     - battleManager: {fileID: 11400000}
+      stats:
+        statAttributes:
+        - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+          stat:
+            basicValue: 1000
+            cachedValue: 1500
+        - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
+          stat:
+            basicValue: 10
+            cachedValue: 10
+        - attribute: {fileID: 11400000, guid: 2a1a45965d08e0c419e7bb6ef65bc7ac, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 100
+        - attribute: {fileID: 11400000, guid: eb67d738fcb1e704c99d1e0a0d32a9d5, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 200
+        - attribute: {fileID: 11400000, guid: 842487759b5e1b942b14b128ca79a19a, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 200
+        - attribute: {fileID: 11400000, guid: 87056de67fc33d946830c15b50887bfe, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 0
+        - attribute: {fileID: 11400000, guid: 30d750d37e6cffd43b21406a0947364e, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 100
+        - attribute: {fileID: 11400000, guid: c37e410c4fb6c304c9416f39d4ba78ef, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 0
       template: {fileID: 11400000, guid: 508fd7b5fd0d2a04cb3213cd5bfa1ca8, type: 2}
       skillSlots:
       - skill: {fileID: 11400000, guid: aa96d4dab112a2e4390511c3f73d4017, type: 2}
@@ -27,16 +88,112 @@ MonoBehaviour:
   monsters:
     party:
     - battleManager: {fileID: 11400000}
+      stats:
+        statAttributes:
+        - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+          stat:
+            basicValue: 1284
+            cachedValue: 1500
+        - attribute: {fileID: 11400000, guid: eb67d738fcb1e704c99d1e0a0d32a9d5, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 130
+        - attribute: {fileID: 11400000, guid: 98a59bd40c4b2d045b3631f13fb596da, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 100
+        - attribute: {fileID: 11400000, guid: 5a44d1fa359fd7543af527037ebe0e45, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 100
+        - attribute: {fileID: 11400000, guid: 9069c5515a51ec548ad7532638fc9302, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 80
+        - attribute: {fileID: 11400000, guid: 842487759b5e1b942b14b128ca79a19a, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 120
+        - attribute: {fileID: 11400000, guid: 87056de67fc33d946830c15b50887bfe, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 50
+      template: {fileID: 11400000, guid: 79cbf1ec7a926f249a89462f0641dcc2, type: 2}
+    - battleManager: {fileID: 11400000}
+      stats:
+        statAttributes:
+        - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+          stat:
+            basicValue: 1500
+            cachedValue: 1500
+        - attribute: {fileID: 11400000, guid: eb67d738fcb1e704c99d1e0a0d32a9d5, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 130
+        - attribute: {fileID: 11400000, guid: 98a59bd40c4b2d045b3631f13fb596da, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 100
+        - attribute: {fileID: 11400000, guid: 5a44d1fa359fd7543af527037ebe0e45, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 100
+        - attribute: {fileID: 11400000, guid: 9069c5515a51ec548ad7532638fc9302, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 80
+        - attribute: {fileID: 11400000, guid: 842487759b5e1b942b14b128ca79a19a, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 120
+        - attribute: {fileID: 11400000, guid: 87056de67fc33d946830c15b50887bfe, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 50
+      template: {fileID: 11400000, guid: 79cbf1ec7a926f249a89462f0641dcc2, type: 2}
+    - battleManager: {fileID: 11400000}
+      stats:
+        statAttributes:
+        - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
+          stat:
+            basicValue: 1500
+            cachedValue: 1500
+        - attribute: {fileID: 11400000, guid: eb67d738fcb1e704c99d1e0a0d32a9d5, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 130
+        - attribute: {fileID: 11400000, guid: 98a59bd40c4b2d045b3631f13fb596da, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 100
+        - attribute: {fileID: 11400000, guid: 5a44d1fa359fd7543af527037ebe0e45, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 100
+        - attribute: {fileID: 11400000, guid: 9069c5515a51ec548ad7532638fc9302, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 80
+        - attribute: {fileID: 11400000, guid: 842487759b5e1b942b14b128ca79a19a, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 120
+        - attribute: {fileID: 11400000, guid: 87056de67fc33d946830c15b50887bfe, type: 2}
+          stat:
+            basicValue: 0
+            cachedValue: 50
       template: {fileID: 11400000, guid: 79cbf1ec7a926f249a89462f0641dcc2, type: 2}
   battleFormation: {fileID: 11400000, guid: c30e4ca308ca2da4b83abada2068643c, type: 2}
   stateFactory:
     _context: {fileID: 11400000}
   selectedHero:
     battleManager: {fileID: 0}
+    stats:
+      statAttributes: []
     template: {fileID: 0}
     skillSlots: []
   selectedSkillSlot:
-    skill: {fileID: 11400000, guid: aa96d4dab112a2e4390511c3f73d4017, type: 2}
+    skill: {fileID: 0}
   hideUIChannel: {fileID: 11400000, guid: 46ab5709b91572643a716a0743bf750f, type: 2}
   showBattleUIChannel: {fileID: 11400000, guid: 003ccfedea6adda4990cab6bf270b637,
     type: 2}
@@ -48,4 +205,14 @@ MonoBehaviour:
   loadBattleSkillMenuChannel: {fileID: 11400000, guid: 3a735049a9c12594797797454f241630,
     type: 2}
   hideBattleSkillMenuChannel: {fileID: 11400000, guid: 3a7f6327ed2119744bda04c8f0c5e208,
+    type: 2}
+  enqueueSkillChannel: {fileID: 11400000, guid: ded2147d37ff4de469cf1bfa6bc8d97d,
+    type: 2}
+  processSkillQueueChannel: {fileID: 11400000, guid: 74326a7019a0dae46959043565d84c1c,
+    type: 2}
+  clearSkillQueueChannel: {fileID: 11400000, guid: ab0217418a547464286907844835e940,
+    type: 2}
+  updateBattleMonsterHealthBar: {fileID: 11400000, guid: 659ef50f6d7450045b9c6c72c71409d4,
+    type: 2}
+  updateBattleHeroStatBars: {fileID: 11400000, guid: 1b91eb94160d9504dac4621607932243,
     type: 2}

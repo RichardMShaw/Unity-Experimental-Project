@@ -31,5 +31,9 @@ public class BattleHeroMenuState : BattleBaseState
   {
 
   }
+  public override void OnSkillQueueComplete()
+  {
+
+  }
 
 }

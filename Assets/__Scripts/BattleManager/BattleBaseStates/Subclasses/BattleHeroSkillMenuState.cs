@@ -7,6 +7,7 @@ public class BattleHeroSkillMenuState : BattleBaseState
   public BattleHeroSkillMenuState(BattleManager currentContext, BattleStateFactory factory) : base(currentContext, factory) { }
   public override void EnterState()
   {
+    _ctx.selectedSkillSlot = null;
     if (_ctx.selectedHero == null)
     {
       SwitchState(_factory.HeroMenu());
@@ -36,8 +37,11 @@ public class BattleHeroSkillMenuState : BattleBaseState
     SwitchState(_factory.HeroSelectTarget());
   }
 
-
   public override void OnBattleMonsterSelect(BattleMonster monster)
+  {
+
+  }
+  public override void OnSkillQueueComplete()
   {
 
   }

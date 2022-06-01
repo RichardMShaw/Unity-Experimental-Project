@@ -17,3 +17,5 @@ MonoBehaviour:
   heroParty: {fileID: 11400000, guid: a184d8589741df44b8ad9269ea9a22f4, type: 2}
   monsterParty:
   - {fileID: 11400000, guid: 79cbf1ec7a926f249a89462f0641dcc2, type: 2}
+  - {fileID: 11400000, guid: 79cbf1ec7a926f249a89462f0641dcc2, type: 2}
+  - {fileID: 11400000, guid: 79cbf1ec7a926f249a89462f0641dcc2, type: 2}

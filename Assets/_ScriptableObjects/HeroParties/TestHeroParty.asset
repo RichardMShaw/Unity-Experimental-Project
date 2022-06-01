@@ -21,12 +21,13 @@ MonoBehaviour:
       basicValue: 2
     skillSlots:
     - skill: {fileID: 11400000, guid: 606ec5c35fda32a4ebd5d14512ce79f4, type: 2}
+    - skill: {fileID: 11400000, guid: 48b35b1ac0e4f78409d0f4c0c182c236, type: 2}
   - template: {fileID: 11400000, guid: 508fd7b5fd0d2a04cb3213cd5bfa1ca8, type: 2}
     stats:
     - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
       basicValue: 1000
     - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
-      basicValue: 3
+      basicValue: 10
     skillSlots:
     - skill: {fileID: 11400000, guid: aa96d4dab112a2e4390511c3f73d4017, type: 2}
     - skill: {fileID: 11400000, guid: 37cda5edcda37fa4abde5127dfd71997, type: 2}

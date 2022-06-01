@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Magic Pebble
   description: 
-  costs: []
+  energyCost: 1
+  flatCosts: []
+  currentValuePercentCosts: []
+  maxValuePercentCosts: []
   scope: {fileID: 11400000, guid: 1797666d8bde3f343aff020dc297aa47, type: 2}
   skillTypes:
   - {fileID: 11400000, guid: d71dcd8290e347e43b30b8d67cca302e, type: 2}

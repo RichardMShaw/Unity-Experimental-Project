@@ -10,7 +10,7 @@ public class RandomEnemyTarget : Target
     var result = new List<BattleCharacter>();
     var enemies = target.allies;
     int len = enemies.Count;
-    int index = Random.Range(0, len - 1);
+    int index = Random.Range(0, len);
     result.Add(enemies[index]);
     return result;
   }

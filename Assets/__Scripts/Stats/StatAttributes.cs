@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 //A wrapper for Attributes and Stats
+[Serializable]
 public class StatAttributes
 {
   public Dictionary<Attribute, Stat> stats;
@@ -43,22 +45,35 @@ public class StatAttributes
     }
     return attribute.defaultValue;
   }
-  public void SetBasicValue(Attribute attribute, int value)
+  public int SetBasicValue(Attribute attribute, int value)
   {
     if (stats.ContainsKey(attribute))
     {
       var stat = stats[attribute];
       stat.basicValue = value;
-      return;
+      return value;
     }
     var newStat = new Stat(attribute);
     stats.Add(attribute, newStat);
     statAttributes.Add(new StatAttribute(attribute, newStat));
     newStat.basicValue = value;
+    return newStat.basicValue;
   }
 
-
-
+  public int ChangeBasicValue(Attribute attribute, int value)
+  {
+    if (stats.ContainsKey(attribute))
+    {
+      var stat = stats[attribute];
+      stat.basicValue += value;
+      return stat.basicValue;
+    }
+    var newStat = new Stat(attribute);
+    stats.Add(attribute, newStat);
+    statAttributes.Add(new StatAttribute(attribute, newStat));
+    newStat.basicValue += value;
+    return newStat.basicValue;
+  }
   public void AddModifier(Attribute attribute, StatModifier modifier)
   {
     if (!stats.ContainsKey(attribute))
@@ -106,6 +121,7 @@ public class StatAttributes
   }
 }
 
+[Serializable]
 public struct StatAttribute
 {
   public Attribute attribute;

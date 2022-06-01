@@ -9,18 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b88a267084074f4e8387e6abe6151b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 117370a8af943b54392dce13886c505c, type: 3}
   m_Name: SlashDamage
   m_EditorClassIdentifier: 
   elements:
   - {fileID: 11400000, guid: 4521ab17a22bfd24da7b9c6476138d83, type: 2}
+  - {fileID: 11400000, guid: d228fa8f50def6a46b118da2d752d581, type: 2}
   powerAttribute: {fileID: 11400000, guid: 2a1a45965d08e0c419e7bb6ef65bc7ac, type: 2}
   defenseAttribute: {fileID: 11400000, guid: 98a59bd40c4b2d045b3631f13fb596da, type: 2}
   affectedAttribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
   attacks:
-  - targets: {fileID: 0}
-    effects:
-    - affectedAttribute: {fileID: 0}
-      potency: 100
+  - targets: {fileID: 11400000, guid: 32212c4fcba47f94f98a6e30a34376f9, type: 2}
     accuracy: 100
     hits: 1
+    effects:
+    - powerAttribute: {fileID: 0}
+      defenseAttribute: {fileID: 0}
+      affectedAttribute: {fileID: 0}
+      elements: []
+      potency: 100

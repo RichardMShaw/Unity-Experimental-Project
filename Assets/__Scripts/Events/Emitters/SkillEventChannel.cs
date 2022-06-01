@@ -4,9 +4,9 @@ using UnityEngine.Events;
 [CreateAssetMenu(menuName = "Project/Event Channels/Skill")]
 public class SkillEventChannel : ScriptableObject
 {
-  public UnityAction<SkillEventData> OnEventRaised;
+  public UnityAction<Skill> OnEventRaised;
 
-  public void RaiseEvent(SkillEventData e)
+  public void RaiseEvent(Skill e)
   {
     if (OnEventRaised != null)
     {

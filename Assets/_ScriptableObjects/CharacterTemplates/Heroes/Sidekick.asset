@@ -13,15 +13,25 @@ MonoBehaviour:
   m_Name: Sidekick
   m_EditorClassIdentifier: 
   name: Sidekick
-  sprite: {fileID: 0}
+  spriteData: {fileID: 0}
   description: 
   basicStats:
   - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
     value: 1500
     basicValue: 1500
   - attribute: {fileID: 11400000, guid: 6801f685d4d48944c9168f005f919b1b, type: 2}
-    value: 3
-    basicValue: 3
-  coreStats: []
-  elementStats: []
+    value: 10
+    basicValue: 10
+  coreStats:
+  - attribute: {fileID: 11400000, guid: 2a1a45965d08e0c419e7bb6ef65bc7ac, type: 2}
+    value: 100
+  - attribute: {fileID: 11400000, guid: eb67d738fcb1e704c99d1e0a0d32a9d5, type: 2}
+    value: 200
+  elementStats:
+  - element: {fileID: 11400000, guid: 0feb4292a233537479a3aea3ef3703fd, type: 2}
+    power: 200
+    weakness: 0
+  - element: {fileID: 11400000, guid: d228fa8f50def6a46b118da2d752d581, type: 2}
+    power: 100
+    weakness: 0
   skills: []

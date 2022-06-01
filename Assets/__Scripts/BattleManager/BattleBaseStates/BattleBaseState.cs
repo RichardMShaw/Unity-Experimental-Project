@@ -16,6 +16,7 @@ public abstract class BattleBaseState
   public abstract void OnBattleHeroSelect(BattleHero hero);
   public abstract void OnBattleHeroSkillSlotSelect(SkillSlot skilleSlot);
   public abstract void OnBattleMonsterSelect(BattleMonster monster);
+  public abstract void OnSkillQueueComplete();
 
   protected void SwitchState(BattleBaseState newState){
     ExitState();

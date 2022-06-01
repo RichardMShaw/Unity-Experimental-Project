@@ -17,8 +17,10 @@ public class BattleHeroSelectTargetState : BattleBaseState
 
   public override void OnBattleHeroSelect(BattleHero hero)
   {
-    _ctx.selectedHero = hero;
-    SwitchState(_factory.HeroSkillMenu());
+    var skillQueueSlot = new SkillQueueSlot(_ctx.selectedHero, hero, _ctx.selectedSkillSlot);
+    _ctx.clearSkillQueueChannel.RaiseEvent();
+    _ctx.enqueueSkillChannel.RaiseEvent(skillQueueSlot);
+    SwitchState(_factory.HeroSkill());
   }
 
   public override void OnBattleHeroSkillSlotSelect(SkillSlot skillSlot)
@@ -28,7 +30,14 @@ public class BattleHeroSelectTargetState : BattleBaseState
 
   public override void OnBattleMonsterSelect(BattleMonster monster)
   {
-    Debug.Log(monster);
+    var skillQueueSlot = new SkillQueueSlot(_ctx.selectedHero, monster, _ctx.selectedSkillSlot);
+    _ctx.clearSkillQueueChannel.RaiseEvent();
+    _ctx.enqueueSkillChannel.RaiseEvent(skillQueueSlot);
+    SwitchState(_factory.HeroSkill());
+  }
+  public override void OnSkillQueueComplete()
+  {
+
   }
 
 }

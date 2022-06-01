@@ -16,8 +16,10 @@ public class BattleManager : ScriptableObject
   public BattleStateFactory stateFactory;
   [Header("State Management")]
   public BattleBaseState currentState;
-  public BattleHero selectedHero;
-  public SkillSlot selectedSkillSlot;
+  #nullable enable
+  public BattleHero? selectedHero;
+  public SkillSlot? selectedSkillSlot;
+  #nullable disable
 
   [Header("Event Channels")]
 
@@ -28,6 +30,12 @@ public class BattleManager : ScriptableObject
   public MonsterFormationEventChannel loadMonsterFormationChannel;
   public BattleHeroEventChannel loadBattleSkillMenuChannel;
   public VoidEventChannel hideBattleSkillMenuChannel;
+  public SkillQueueSlotEventChannel enqueueSkillChannel;
+  public VoidEventChannel processSkillQueueChannel;
+  public VoidEventChannel clearSkillQueueChannel;
+  public VoidEventChannel updateBattleMonsterHealthBar;
+
+  public VoidEventChannel updateBattleHeroStatBars;
 
   public void OnLoadBattle(Battle _battle)
   {
@@ -66,6 +74,10 @@ public class BattleManager : ScriptableObject
 
   public void OnBattleHeroSkillSlotSelect(SkillSlot skillSlot){
     currentState.OnBattleHeroSkillSlotSelect(skillSlot);
+  }
+
+  public void OnSkillQueueCompletle(){
+    currentState.OnSkillQueueComplete();
   }
 }
 

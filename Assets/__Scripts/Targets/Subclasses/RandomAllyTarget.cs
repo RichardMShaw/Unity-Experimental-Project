@@ -11,7 +11,7 @@ public class RandomAllyTarget : Target
     var result = new List<BattleCharacter>();
     var allies = caster.allies;
     int len = allies.Count;
-    int index = Random.Range(0, len - 1);
+    int index = Random.Range(0, len);
     result.Add(allies[index]);
     return result;
   }

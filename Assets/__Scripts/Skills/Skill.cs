@@ -9,7 +9,14 @@ public class Skill : ScriptableObject
   public new string name;
   [TextArea(3, 20)]
   public string description;
-  public List<CostAttribute> costs; 
+
+  [Header("Skill Slot Costs")]
+  public int energyCost = 0;
+  public List<CostAttribute> flatCosts;
+  public List<CostAttribute> currentValuePercentCosts;
+  public List<CostAttribute> maxValuePercentCosts;
+
+  [Header("Skill Details")]
   public Scope scope;
   public List<SkillType> skillTypes;
   public List<SkillEffect> skillEffects;
@@ -29,12 +36,6 @@ public class Skill : ScriptableObject
     //       }
     //     }
     // }
-    // foreach(var cost in costs){
-    //   if(caster.GetStatBasicValue(cost.attribute) < cost.cost){
-    //     Debug.Log("Not enough: " + cost.attribute.name);
-    //     return false;
-    //   }
-    // }
     return true;
   }
 
@@ -43,11 +44,6 @@ public class Skill : ScriptableObject
     if(!AttemptCast(caster, target)){
       return;
     }
-    // foreach (var cost in costs)
-    // {
-    //   var stat = caster.GetStat(cost.attribute);
-    //   stat.basicValue -= cost.cost;
-    // }
     foreach (var skillEffect in skillEffects)
     {
       skillEffect.Cast(caster, target);
@@ -65,10 +61,5 @@ public class Skill : ScriptableObject
 [Serializable]
 public struct CostAttribute {
   public BasicAttribute attribute;
-
-  public int cost;
-
-  public bool percentOfCurrentValue;
-
-  public bool percentOfMaxValue;
+  public int value;
 }

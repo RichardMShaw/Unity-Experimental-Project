@@ -13,9 +13,13 @@ public class BattleMonsterComponent : MonoBehaviour
 
   [Header("Event Channels")]
   [SerializeField]
-  private BattleMonsterEventChannel monsterSelect;
+  private BattleMonsterEventChannel pointerEnter;
+  [SerializeField]
+  private BattleMonsterEventChannel pointerExit;
+  [SerializeField]
+  private BattleMonsterEventChannel pointerDown;
 
-  public void OnRerenderSprite()
+  public void OnLoadSprite()
   {
     var spriteData = monster.spriteData;
     spriteRenderer.sprite = spriteData.sprite;
@@ -24,10 +28,18 @@ public class BattleMonsterComponent : MonoBehaviour
     spriteTransform.rotation = spriteDataTransform.rotation;
     spriteTransform.localScale = spriteDataTransform.scale;
   }
-
-  public void OnMonsterSelect()
+  public void OnPointerEnter()
   {
-    monsterSelect.RaiseEvent(monster);
+    pointerEnter.RaiseEvent(monster);
+  }
+
+  public void OnPointerExit()
+  {
+    pointerExit.RaiseEvent(monster);
+  }
+  public void OnPointerDown()
+  {
+    pointerDown.RaiseEvent(monster);
   }
 
   public void OnPositionMonster(PositionMonster monsterPosition)

@@ -5,8 +5,7 @@ using UnityEngine;
 public class BattleHeroListComponent : MonoBehaviour
 {
   public GameObject heroPrefab;
-
-  public VoidEventChannel rerenderBattleHeroChannel;
+  public VoidEventChannel updateBattleHeroChannel;
   public void LoadHeroes(List<BattleHero> heroes)
   {
     foreach (Transform child in transform)
@@ -21,8 +20,7 @@ public class BattleHeroListComponent : MonoBehaviour
       BattleHeroComponent heroComponent = heroObj.GetComponent<BattleHeroComponent>();
       heroComponent.hero = hero;
     }
-
-    rerenderBattleHeroChannel.RaiseEvent();
+    updateBattleHeroChannel.RaiseEvent();
   }
 
 }

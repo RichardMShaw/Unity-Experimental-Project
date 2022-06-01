@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Triple Fire Ball
   description: 
+  energyCost: 0
+  flatCosts: []
+  currentValuePercentCosts: []
+  maxValuePercentCosts: []
   scope: {fileID: 11400000, guid: ab147fccc2bc0b04daaf61fddc94e8d6, type: 2}
   skillTypes:
   - {fileID: 11400000, guid: d71dcd8290e347e43b30b8d67cca302e, type: 2}

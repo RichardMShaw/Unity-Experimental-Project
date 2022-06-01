@@ -18,12 +18,12 @@ MonoBehaviour:
   basicStats:
   - attribute: {fileID: 11400000, guid: 3665d89a3798cf64c8d0f8857a0a292a, type: 2}
     value: 1500
-    basicValue: 1000
+    basicValue: 1500
   coreStats:
   - attribute: {fileID: 11400000, guid: eb67d738fcb1e704c99d1e0a0d32a9d5, type: 2}
     value: 130
   - attribute: {fileID: 11400000, guid: 98a59bd40c4b2d045b3631f13fb596da, type: 2}
-    value: 80
+    value: 100
   elementStats:
   - element: {fileID: 11400000, guid: 4521ab17a22bfd24da7b9c6476138d83, type: 2}
     power: 100

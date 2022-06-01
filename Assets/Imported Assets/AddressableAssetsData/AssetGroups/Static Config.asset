@@ -25,6 +25,14 @@ MonoBehaviour:
     m_Address: BaseModifier
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6801f685d4d48944c9168f005f919b1b
+    m_Address: EnergyAttribute
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3665d89a3798cf64c8d0f8857a0a292a
+    m_Address: HealthAttribute
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 072dc4a08f2cf374482346f65dc5d240, type: 2}
   m_SchemaSet:

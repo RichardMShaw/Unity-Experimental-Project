@@ -12,14 +12,16 @@ public abstract class BattleCharacter
     }
   }
 
-  public virtual SpriteData spriteData {
-    get {
+  public virtual SpriteData spriteData
+  {
+    get
+    {
       return null;
     }
   }
+  public BattleManager battleManager;
   public StatAttributes stats;
 
-  public BattleManager battleManager;
 
   public virtual List<BattleCharacter> allies
   {
@@ -49,6 +51,20 @@ public abstract class BattleCharacter
   public int GetStatBasicValue(Attribute attribute)
   {
     return stats.GetBasicValue(attribute);
+  }
+
+  public int SetStatBasicValue(Attribute attribute, int value)
+  {
+    return stats.SetBasicValue(attribute, value);
+  }
+
+  public int ChangeStatBasicValue(Attribute attribute, int value)
+  {
+    int newVal = stats.ChangeBasicValue(attribute, value);
+    // if(newVal < 1 && BasicAttribute.Health == attribute){
+
+    // }
+    return newVal;
   }
 
   public void Initalize(CharacterTemplate template, BattleManager _battleManager)
