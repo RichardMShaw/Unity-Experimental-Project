@@ -20,7 +20,7 @@ public class Skill : ScriptableObject
   public Scope scope;
   public List<SkillType> skillTypes;
   public List<SkillEffect> skillEffects;
-  public bool AttemptCast(BattleCharacter caster, BattleCharacter target)
+  public bool CanCast(BattleCharacter caster, BattleCharacter target)
   {
     // var restrictions = new Dictionary<Attribute, bool>();
     // foreach (var type in skillTypes)
@@ -41,7 +41,7 @@ public class Skill : ScriptableObject
 
   public void Cast(BattleCharacter caster, BattleCharacter target)
   {
-    if(!AttemptCast(caster, target)){
+    if(!CanCast(caster, target)){
       return;
     }
     foreach (var skillEffect in skillEffects)
@@ -50,7 +50,7 @@ public class Skill : ScriptableObject
     }
   }
 
-  public void BypassAttempt(BattleCharacter caster, BattleCharacter target){
+  public void BypassCastCheck(BattleCharacter caster, BattleCharacter target){
     foreach (var skillEffect in skillEffects)
     {
       skillEffect.Cast(caster, target);

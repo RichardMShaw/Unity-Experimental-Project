@@ -29,7 +29,7 @@ public class SkillSlot
     skill = skillSlot.skill;
   }
 
-  public bool AttemptCast(BattleCharacter caster)
+  public bool CanCast(BattleCharacter caster)
   {
     int energyCost = skill.energyCost;
     if (energyCost > 0)
@@ -112,11 +112,11 @@ public class SkillSlot
 
   public void Cast(BattleCharacter caster, BattleCharacter target)
   {
-    if (!AttemptCast(caster) || !skill.AttemptCast(caster, target))
+    if (!CanCast(caster) || !skill.CanCast(caster, target))
     {
       return;
     }
     ApplyCost(caster);
-    skill.BypassAttempt(caster, target);
+    skill.BypassCastCheck(caster, target);
   }
 }
