@@ -28,8 +28,19 @@ public class BattleHeroSkillMenuState : BattleBaseState
       return;
     }
     _ctx.selectedHero = hero;
+    _ctx.selectBattleHero.RaiseEvent(hero);
     SwitchState(_factory.HeroSkillMenu());
   }
+
+  public override void OnBattleHeroStopHover(BattleHero hero)
+  {
+    _ctx.hideBattleHeroHighlight.RaiseEvent(hero);
+  }
+  public override void OnBattleHeroHover(BattleHero hero)
+  {
+    _ctx.showBattleHeroHighlight.RaiseEvent(hero);
+  }
+
 
   public override void OnBattleHeroSkillSlotSelect(SkillSlot skillSlot)
   {

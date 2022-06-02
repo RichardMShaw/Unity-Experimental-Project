@@ -19,6 +19,7 @@ public abstract class BattleCharacter
       return null;
     }
   }
+  [HideInInspector]
   public BattleManager battleManager;
   public StatAttributes stats;
 

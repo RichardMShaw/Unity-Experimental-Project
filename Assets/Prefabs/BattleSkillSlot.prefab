@@ -243,7 +243,7 @@ MonoBehaviour:
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -284,8 +284,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e20835aec578b748b233bc4623e58c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caster:
+    battleManager: {fileID: 0}
+    stats:
+      statAttributes: []
+    template: {fileID: 0}
+    skillSlots: []
   skillSlot:
     skill: {fileID: 0}
+  button: {fileID: 2431583919123661984}
   skillName: {fileID: 2431583918116768226}
   skillCosts: {fileID: 7153919462041071396}
   skillSlotHover: {fileID: 11400000, guid: 754214466bb1ba240b75202ce6018ae7, type: 2}

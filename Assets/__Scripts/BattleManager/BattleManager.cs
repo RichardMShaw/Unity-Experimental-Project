@@ -35,6 +35,10 @@ public class BattleManager : ScriptableObject
   public VoidEventChannel clearSkillQueueChannel;
   public VoidEventChannel updateBattleMonsterHealthBar;
   public VoidEventChannel updateBattleHeroStatBars;
+  public BattleHeroEventChannel hideBattleHeroHighlight;
+  public BattleHeroEventChannel showBattleHeroHighlight;
+  public BattleHeroEventChannel selectBattleHero;
+  public VoidEventChannel unselectBattleHero;
   public BattleMonsterEventChannel onShowBattleMonsterCursor;
   public BattleMonsterEventChannel onHideBattleMonsterCursor;
 
@@ -67,6 +71,15 @@ public class BattleManager : ScriptableObject
   public void OnBattleHeroSelect(BattleHero hero)
   {
     currentState.OnBattleHeroSelect(hero);
+  }
+
+  public void OnBattleHeroStopHover(BattleHero hero)
+  {
+    currentState.OnBattleHeroStopHover(hero);
+  }
+  public void OnBattleHeroHover(BattleHero hero)
+  {
+    currentState.OnBattleHeroHover(hero);
   }
   public void OnBattleMonsterSelect(BattleMonster monster)
   {

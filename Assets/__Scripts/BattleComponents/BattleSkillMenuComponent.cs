@@ -18,6 +18,7 @@ public class BattleSkillMenuComponent : MonoBehaviour
       gameObject.transform.SetParent(this.transform);
       gameObject.transform.localScale = new Vector3(1, 1, 1);
       BattleSkillSlotComponent gameObjectComponent = gameObject.GetComponent<BattleSkillSlotComponent>();
+      gameObjectComponent.caster = hero;
       gameObjectComponent.skillSlot = skillSlot;
       rerenderBattleSkillSlotChannel.RaiseEvent();
     }

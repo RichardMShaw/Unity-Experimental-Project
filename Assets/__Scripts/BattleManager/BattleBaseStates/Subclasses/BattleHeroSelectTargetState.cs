@@ -23,6 +23,16 @@ public class BattleHeroSelectTargetState : BattleBaseState
     SwitchState(_factory.HeroSkill());
   }
 
+  public override void OnBattleHeroStopHover(BattleHero hero)
+  {
+    _ctx.hideBattleHeroHighlight.RaiseEvent(hero);
+  }
+  public override void OnBattleHeroHover(BattleHero hero)
+  {
+    _ctx.showBattleHeroHighlight.RaiseEvent(hero);
+  }
+
+
   public override void OnBattleHeroSkillSlotSelect(SkillSlot skillSlot)
   {
 

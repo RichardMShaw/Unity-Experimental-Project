@@ -14,6 +14,8 @@ public abstract class BattleBaseState
   public abstract void EnterState();
   public abstract void ExitState();
   public abstract void OnBattleHeroSelect(BattleHero hero);
+  public abstract void OnBattleHeroStopHover(BattleHero hero);
+  public abstract void OnBattleHeroHover(BattleHero hero);
   public abstract void OnBattleHeroSkillSlotSelect(SkillSlot skilleSlot);
   public abstract void OnBattleMonsterStopHover(BattleMonster monster);
   public abstract void OnBattleMonsterHover(BattleMonster monster);
