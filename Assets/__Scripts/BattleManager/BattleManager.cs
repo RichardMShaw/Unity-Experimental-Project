@@ -41,7 +41,34 @@ public class BattleManager : ScriptableObject
   public VoidEventChannel unselectBattleHero;
   public BattleMonsterEventChannel onShowBattleMonsterCursor;
   public BattleMonsterEventChannel onHideBattleMonsterCursor;
+  public BattleHeroEventChannel battleHeroKnockoutChannel;
+  public BattleHeroEventChannel battleHeroReviveChannel;
+  public BattleMonsterEventChannel battleMonsterKnockoutChannel;
+  public BattleMonsterEventChannel battleMonsterReviveChannel;
+  public BattleMonsterEventChannel battleMonsterRemove;
+  public MonsterFormationEventChannel changeMonsterFormationChannel;
 
+  public void BattleMonsterRemove(BattleMonster monster){
+    battleMonsterRemove.RaiseEvent(monster);
+    monsters.Remove(monster);
+    changeMonsterFormationChannel.RaiseEvent(battleFormation.GetMonsterFormation(monsters.party));
+  }
+  public void BattleMonsterKnockout(BattleMonster monster){
+    battleMonsterKnockoutChannel.RaiseEvent(monster);
+    if(monster.removeable){
+      BattleMonsterRemove(monster);
+    }
+  }
+  public void BattleMonsterRevive(BattleMonster monster){
+    battleMonsterReviveChannel.RaiseEvent(monster);
+  }
+  public void BattleHeroRevive(BattleHero hero)
+  {
+    battleHeroReviveChannel.RaiseEvent(hero);
+  }
+  public void BattleHeroKnockout(BattleHero hero){
+    battleHeroKnockoutChannel.RaiseEvent(hero);
+  }
   public void OnLoadBattle(Battle _battle)
   {
     battle = _battle;

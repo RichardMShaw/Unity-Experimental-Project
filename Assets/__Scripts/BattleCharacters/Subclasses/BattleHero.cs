@@ -29,10 +29,31 @@ public class BattleHero : BattleCharacter
     }
   }
 
+  public override int SetStatBasicValue(Attribute attribute, int value)
+  {
+    if(!unkillable && attribute == BasicAttribute.Health && value < 1){
+      knockedOut = true;
+      battleManager.BattleHeroKnockout(this);
+    }
+    return stats.SetBasicValue(attribute, value);
+  }
+
+  public override int ChangeStatBasicValue(Attribute attribute, int value)
+  {
+    int newVal = stats.ChangeBasicValue(attribute, value);
+    if (!unkillable && attribute == BasicAttribute.Health && newVal < 1)
+    {
+      knockedOut = true;
+      battleManager.BattleHeroKnockout(this);
+    }
+    return newVal;
+  }
+
   public BattleHero(HeroPartySlot hero, BattleManager _battleManager)
   {
     template = hero.template;
     Initalize(template, _battleManager);
+    knockedOut = hero.knockedOut;
     foreach (var basicStat in hero.stats)
     {
       stats.SetBasicValue(basicStat.attribute, basicStat.basicValue);

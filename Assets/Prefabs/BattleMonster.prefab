@@ -518,6 +518,8 @@ GameObject:
   - component: {fileID: 7792358609300750020}
   - component: {fileID: 6251190015762240007}
   - component: {fileID: 2626846624270834870}
+  - component: {fileID: 1623832876351349674}
+  - component: {fileID: 4887804631560915435}
   m_Layer: 0
   m_Name: BattleMonster
   m_TagString: Untagged
@@ -572,6 +574,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monster:
     battleManager: {fileID: 0}
+    unkillable: 0
+    removeable: 0
+    knockedOut: 0
     stats:
       statAttributes: []
     template: {fileID: 0}
@@ -767,6 +772,62 @@ MonoBehaviour:
       - m_Target: {fileID: 6845515216422305040}
         m_TargetAssemblyTypeName: BattleMonsterComponent, Assembly-CSharp
         m_MethodName: OnShowCursor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1623832876351349674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528532530951794102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859488428ad24374bb0b4f4b1cfe4d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _channel: {fileID: 11400000, guid: f29f319e44fd52642ab686e4f1c36a02, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6845515216422305040}
+        m_TargetAssemblyTypeName: BattleMonsterComponent, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4887804631560915435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528532530951794102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754fdf4938215af449acb94f1b351e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _channel: {fileID: 11400000, guid: 7031976bfdb901b42b393483dc4a7812, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6845515216422305040}
+        m_TargetAssemblyTypeName: BattleMonsterComponent, Assembly-CSharp
+        m_MethodName: OnRemove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -991,6 +1052,7 @@ GameObject:
   - component: {fileID: 2808073162454499023}
   - component: {fileID: 4275458308626148505}
   - component: {fileID: 7400420460859262841}
+  - component: {fileID: 5601709580598041508}
   m_Layer: 0
   m_Name: Health Bar
   m_TagString: Untagged
@@ -1147,6 +1209,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: BattleMonsterStatBarComponent, Assembly-CSharp
         m_MethodName: OnUpdate
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5601709580598041508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870672663320771228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754fdf4938215af449acb94f1b351e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _channel: {fileID: 11400000, guid: 7031976bfdb901b42b393483dc4a7812, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4275458308626148505}
+        m_TargetAssemblyTypeName: BattleMonsterStatBarComponent, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

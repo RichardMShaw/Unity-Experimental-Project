@@ -38,6 +38,26 @@ public class BattleMonster : BattleCharacter
       return battleManager.heroes.GetPartyAsBaseClass();
     }
   }
+  public override int SetStatBasicValue(Attribute attribute, int value)
+  {
+    if (!unkillable && attribute == BasicAttribute.Health && value < 1)
+    {
+      knockedOut = true;
+      battleManager.BattleMonsterKnockout(this);
+    }
+    return stats.SetBasicValue(attribute, value);
+  }
+
+  public override int ChangeStatBasicValue(Attribute attribute, int value)
+  {
+    int newVal = stats.ChangeBasicValue(attribute, value);
+    if (!unkillable && attribute == BasicAttribute.Health && newVal < 1)
+    {
+      knockedOut = true;
+      battleManager.BattleMonsterKnockout(this);
+    }
+    return newVal;
+  }
   public BattleMonster(MonsterTemplate monster, BattleManager _battleManager)
   {
     template = monster;

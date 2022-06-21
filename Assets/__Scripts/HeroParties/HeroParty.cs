@@ -14,8 +14,12 @@ public class HeroParty : ScriptableObject
 public struct HeroPartySlot
 {
   public HeroTemplate template;
+  [Header("Flags")]
+  public bool knockedOut;
 
+  [Header("Stats")]
   public List<HeroPartySlotBasicStat> stats;
+  [Header("Skills")]
   public List<SkillSlot> skillSlots;
 }
 

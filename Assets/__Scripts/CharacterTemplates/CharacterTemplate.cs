@@ -10,7 +10,11 @@ public abstract class CharacterTemplate : ScriptableObject
 
   [TextArea(3, 20)]
   public string description;
-
+  
+  [Header("Flags")]
+  public bool unkillable;
+  public bool removeable;
+  [Header("Stats")]
   public List<CharacterTemplateBasicStatAttribute> basicStats;
   public List<CharacterTemplateCoreStatAttribute> coreStats;
   public List<CharacterTemplateElementStatAttribute> elementStats;

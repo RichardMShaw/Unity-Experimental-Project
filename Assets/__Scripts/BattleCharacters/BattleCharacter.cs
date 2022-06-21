@@ -21,6 +21,18 @@ public abstract class BattleCharacter
   }
   [HideInInspector]
   public BattleManager battleManager;
+
+  [Header("Flags")]
+  public bool unkillable;
+  public bool removeable;
+  public bool knockedOut;
+  public bool Targetable {
+    get {
+      return !knockedOut;
+    }
+  }
+
+  [Header("Stats")]
   public StatAttributes stats;
 
 
@@ -54,23 +66,22 @@ public abstract class BattleCharacter
     return stats.GetBasicValue(attribute);
   }
 
-  public int SetStatBasicValue(Attribute attribute, int value)
+  public virtual int SetStatBasicValue(Attribute attribute, int value)
   {
     return stats.SetBasicValue(attribute, value);
   }
 
-  public int ChangeStatBasicValue(Attribute attribute, int value)
+  public virtual int ChangeStatBasicValue(Attribute attribute, int value)
   {
     int newVal = stats.ChangeBasicValue(attribute, value);
-    // if(newVal < 1 && BasicAttribute.Health == attribute){
-
-    // }
     return newVal;
   }
 
   public void Initalize(CharacterTemplate template, BattleManager _battleManager)
   {
     battleManager = _battleManager;
+    unkillable = template.unkillable;
+    removeable = template.removeable;
     stats = new StatAttributes();
     foreach (var stat in template.basicStats)
     {

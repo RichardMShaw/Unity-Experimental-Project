@@ -25,4 +25,11 @@ public class BattleMonsterStatBarComponent : MonoBehaviour
     fill.color = color;
   }
 
+  public void Hide(BattleMonster monster){
+    if(parent.monster == monster){
+      gameObject.SetActive(false);
+    }
+
+  }
+
 }

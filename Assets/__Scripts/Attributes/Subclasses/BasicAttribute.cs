@@ -12,7 +12,7 @@ public class BasicAttribute : Attribute
   {
     get
     {
-      if (energy == null)
+      if (health == null)
       {
         var op = Addressables.LoadAssetAsync<BasicAttribute>("HealthAttribute");
         var obj = op.WaitForCompletion();
@@ -21,7 +21,7 @@ public class BasicAttribute : Attribute
         {
           throw new System.Exception("Could not find any singleton scriptable object instances in the reurce");
         }
-        energy = obj;
+        health = obj;
       }
       return health;
     }
@@ -46,8 +46,10 @@ public class BasicAttribute : Attribute
     }
   }
   public int defaultBasicValue;
-  public override int getDefaultBasicValue {
-    get {
+  public override int getDefaultBasicValue
+  {
+    get
+    {
       return defaultBasicValue;
     }
   }

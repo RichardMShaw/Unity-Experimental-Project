@@ -9,8 +9,19 @@ public class BattleMonsterListComponent : MonoBehaviour
   [Header("Event Channels")]
   public VoidEventChannel updateBattleMonsterChannel;
   public PositionMonsterEventChannel positionMonsterEventChannel;
-
+  public PositionMonsterEventChannel moveMonsterEventChannel;
   private List<BattleMonster> monsterParty;
+
+  public void ChangeMonsterFormation(MonsterFormation formation){
+    var positions = formation.formationPositions;
+    int len = positions.Count;
+    for (int i = 0; i < len; i++)
+    {
+      var monster = monsterParty[i];
+      var position = positions[i];
+      moveMonsterEventChannel.RaiseEvent(new PositionMonster(monster, position));
+    }
+  }
   public void LoadMonsters(List<BattleMonster> monsters)
   {
     monsterParty = monsters;

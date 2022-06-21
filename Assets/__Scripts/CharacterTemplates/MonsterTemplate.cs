@@ -6,4 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Project/Characters/Monster")]
 public class MonsterTemplate : CharacterTemplate
 {
+  public MonsterTemplate() : base() {
+    removeable = true;
+  }
 }
